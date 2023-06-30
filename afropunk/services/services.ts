@@ -2,6 +2,7 @@ import { PrismaClient, user, ingresso} from "@prisma/client";
 import {PrismaClientKnownRequestError} from "@prisma/client/runtime";
 
 export const prisma = new PrismaClient();//Cliente do prisma: Conexão com o banco de dados
+export const url = process.env.NEXTAUTH_URL;//URL do site, para ser usada em requisições
 
 export type UserObj = user;
 export type IngressoObj = ingresso;
@@ -19,15 +20,29 @@ export async function newUser(nome:string, email:string, cpf:string, senha:strin
 			}
 		});
 	} catch (error) {
-		if (error instanceof PrismaClientKnownRequestError) {
-			if (error.code === "P2002" && (error.meta as {target: string[]}).target.includes("email")) {
-				console.log("O email inserido já está associado a outro usuário.");
-			}
-			if (error.code === "P2002" && (error.meta as {target: string[]}).target.includes("cpf")) {
-				console.log("O CPF inserido já está associado a outro usuário.");
-			}
-		}
+		console.log("Erro ao criar usuário: "+error);
 	} finally{
 		return usuario;
+	}
+}
+
+export async function checaCredenciais(email:string, senha:string):Promise<{name:string, email:string, id: number}|null>{//Tenta fazer login com o email e senha fornecidos
+	let usuario:UserObj|null = null;
+	try{
+		usuario = await prisma.user.findFirst({
+			where:{
+				email:email,
+				senha:senha
+			}
+		});
+	} catch (error) {
+		console.log(error);
+	} finally{
+		if (usuario){
+			return {name:usuario.nome, email:usuario.email, id:usuario.id};
+		}
+		else{
+			return null;
+		}
 	}
 }

@@ -11,6 +11,14 @@ export enum TiposIngressos{
 	meia = "meia",
 	meiasocial = "meiasocial"
 }
+export type Perfil = {
+	nome:string,
+	email:string,
+	cpf:string,
+	idade:number,
+	telefone:string|null,
+	endereco:string|null
+}
 
 export async function newUser(nome:string, email:string, cpf:string, senha:string, idade:number):Promise<UserObj|null>{//Tenta cadastrar um novo usuário no banco de dados
 	let usuario:UserObj|null = null;
@@ -105,4 +113,67 @@ export async function efetuarPedido(idUsuario:number, inteiras:number, meias:num
 		}
 	}
 	return ingressos;
+}
+
+export async function getPerfil(idUsuario:number):Promise<Perfil|null>{//Retorna o perfil do usuário com o id fornecido
+	const usuario = await prisma.user.findFirst({
+		where:{
+			id:idUsuario
+		}
+	});
+	if (usuario){
+		console.log(`Usuário ${usuario.nome} de id ${usuario.id} encontrado.`);
+		return{
+			nome:usuario.nome,
+			email:usuario.email,
+			cpf:usuario.cpf,
+			idade:usuario.idade,
+			telefone:usuario.telefone,
+			endereco:usuario.endereco
+		}
+	}
+	else{
+		console.log(`Usuário de id ${idUsuario} não encontrado.`);
+		return null;
+	}
+}
+
+export async function setPerfil(userId:number, nome:string, idade:number, telefone:string, endereco:string):Promise<Perfil|null>{//Atualizar o perfil do usuário com o id fornecido e retorna o perfil atualizado (ou null se o usuário não for encontrado)
+	let newTelefone:string|null = telefone;
+	let newEndereco:string|null = endereco;
+	if (telefone===""){
+		newTelefone = null;
+	}
+	if (endereco===""){
+		newEndereco = null;
+	}
+	if (nome===""){
+		throw new Error("Nome não pode ser vazio.");
+	}
+	const usuario = await prisma.user.update({
+		where:{
+			id:userId
+		},
+		data:{
+			nome:nome,
+			idade:idade,
+			telefone:newTelefone,
+			endereco:newEndereco
+		}
+	});
+	if (usuario){
+		console.log(`Perfil do usuário ${usuario.nome} de id ${usuario.id} atualizado.`);
+		return{
+			nome:usuario.nome,
+			email:usuario.email,
+			cpf:usuario.cpf,
+			idade:usuario.idade,
+			telefone:usuario.telefone,
+			endereco:usuario.endereco
+		}
+	}
+	else{
+		console.log(`Usuário de id ${userId} não encontrado.`);
+		return null;
+	}
 }

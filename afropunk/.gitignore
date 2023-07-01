@@ -38,5 +38,6 @@ next-env.d.ts
 .vercel
 .env*.local
 
-#Pasta com páginas para testes de rotas
+#Para testes
 pages/teste
+pages/api/teste.ts

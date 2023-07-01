@@ -6,6 +6,11 @@ export const maxIngressos= 250;//Número máximo de ingressos que podem ser vend
 
 export type UserObj = user;
 export type IngressoObj = ingresso;
+export enum TiposIngressos{
+	inteira = "inteira",
+	meia = "meia",
+	meiasocial = "meiasocial"
+}
 
 export async function newUser(nome:string, email:string, cpf:string, senha:string, idade:number):Promise<UserObj|null>{//Tenta cadastrar um novo usuário no banco de dados
 	let usuario:UserObj|null = null;
@@ -50,4 +55,54 @@ export async function checaCredenciais(email:string, senha:string):Promise<{name
 export async function ingressosDisponiveis():Promise<number>{//Retorna o número de ingressos disponíveis
 	const vendidos = await prisma.ingresso.count();
 	return maxIngressos - vendidos;
+}
+
+export async function compraIngresso(idUsuario:number, tipo:TiposIngressos):Promise<IngressoObj|null>{//Tenta comprar um ingresso para o usuário com o id fornecido e do tipo fornecido
+	if (await ingressosDisponiveis()===0){
+		console.log("Não há ingressos disponíveis. Compra não realizada.");
+		return null;
+	}
+	const ingresso = await prisma.ingresso.create({
+		data: {
+		  tipo: tipo,
+		  user: { connect: { id: idUsuario } },
+		},
+	  });
+	if(ingresso){
+		console.log(`Ingresso ${ingresso.id} do tipo ${ingresso.tipo} comprado com sucesso para o usuário de id ${idUsuario}`);
+		return ingresso;
+	}
+	else{
+		console.log(`Erro ao comprar ingresso para o usuário de id ${idUsuario}`);
+		return null;
+	}
+}
+
+export async function efetuarPedido(idUsuario:number, inteiras:number, meias:number, meiasSociais:number):Promise<IngressoObj[]|null>{//Tenta efetuar um pedido de ingressos para o usuário com o id fornecido
+	const qtdIngressos = inteiras + meias + meiasSociais;
+	if (qtdIngressos>await ingressosDisponiveis()){
+		console.log(`Não há ingressos suficientes para o pedido. Compra não realizada.`);
+		return null;
+	}
+	let ingressos:IngressoObj[] = [];
+	let newIngresso:IngressoObj|null;
+	for (let i=0; i<inteiras; i++){
+		newIngresso = await compraIngresso(idUsuario, TiposIngressos.inteira);
+		if (newIngresso){
+			ingressos.push(newIngresso);
+		}
+	}
+	for (let i=0; i<meias; i++){
+		newIngresso = await compraIngresso(idUsuario, TiposIngressos.meia);
+		if (newIngresso){
+			ingressos.push(newIngresso);
+		}
+	}
+	for (let i=0; i<meiasSociais; i++){
+		newIngresso = await compraIngresso(idUsuario, TiposIngressos.meiasocial);
+		if (newIngresso){
+			ingressos.push(newIngresso);
+		}
+	}
+	return ingressos;
 }

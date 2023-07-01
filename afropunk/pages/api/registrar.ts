@@ -7,7 +7,7 @@ export default async function handler(
 ) {
 console.log("Requisição recebida em api/registrar");
   if (req.method!=="POST"){
-    console.log("Método diferente de POST, retorna erro 405")
+    console.log("Método diferente de POST, retorna erro 405");
     res.status(405).json(null);
   }
   else{

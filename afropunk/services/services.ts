@@ -1,8 +1,8 @@
 import { PrismaClient, user, ingresso} from "@prisma/client";
-import {PrismaClientKnownRequestError} from "@prisma/client/runtime";
 
 export const prisma = new PrismaClient();//Cliente do prisma: Conexão com o banco de dados
 export const url = process.env.NEXTAUTH_URL;//URL do site, para ser usada em requisições
+export const maxIngressos= 250;//Número máximo de ingressos que podem ser vendidos
 
 export type UserObj = user;
 export type IngressoObj = ingresso;
@@ -45,4 +45,9 @@ export async function checaCredenciais(email:string, senha:string):Promise<{name
 			return null;
 		}
 	}
+}
+
+export async function ingressosDisponiveis():Promise<number>{//Retorna o número de ingressos disponíveis
+	const vendidos = await prisma.ingresso.count();
+	return maxIngressos - vendidos;
 }

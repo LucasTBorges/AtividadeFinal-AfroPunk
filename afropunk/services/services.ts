@@ -177,3 +177,18 @@ export async function setPerfil(userId:number, nome:string, idade:number, telefo
 		return null;
 	}
 }
+
+export async function getIngressos(idUsuario:number):Promise<IngressoObj[]|null>{//Retorna os ingressos do usuário com o id fornecido
+	const user = await prisma.user.findUnique({
+		where: { id: idUsuario },
+		include: { ingressos: true },
+	  });
+	if (user){
+		console.log(`Usuário ${user.nome} de id ${user.id} encontrado.`);
+		return user.ingressos;
+	}
+	else{
+		console.log(`Usuário de id ${idUsuario} não encontrado.`);
+		return null;
+	}
+}

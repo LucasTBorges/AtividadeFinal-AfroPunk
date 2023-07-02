@@ -1,7 +1,20 @@
+"use client"
 import styles from '@/styles/Forms.module.css'
+import { signIn } from 'next-auth/react'
+import { useRef } from 'react'
 
 export default function Login(){
-    
+    const email = useRef("")
+    const senha = useRef("")
+
+    const onSubmit = async () => {
+        const result = await signIn("credentials", {
+            email: email.current,
+            password: senha.current,
+            redirect:true,
+            callbackUrl:"/",
+        })
+    }
     return(
         <>
             <main className={styles.main}>
@@ -13,14 +26,14 @@ export default function Login(){
                         <button className={styles.btnVoltar}>Voltar</button>
                     </div>
                     <div>
-                        <form action="" className={styles.forms}>
+                        <form className={styles.forms}>
                             <h1>Login</h1>
                             <div>
-                                <input type='email' placeholder='E-mail'/>
-                                <input type='password' placeholder='Senha'/>
+                                <input onChange={(e) => (email.current = e.target.value)} type='email' placeholder='E-mail'/>
+                                <input onChange={(e) => (senha.current = e.target.value)} type='password' placeholder='Senha'/>
                             </div>
                             <div className={styles.send}>
-                                <button className={styles.btnEntrar}>Entrar</button>
+                                <button onClick={onSubmit} className={styles.btnEntrar}>Entrar</button>
                                 <p>Não tem conta? <a href='#'>Crie agora</a>!</p>
                             </div>
                         </form>

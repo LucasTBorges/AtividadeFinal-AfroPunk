@@ -23,7 +23,7 @@ export default function Login(){
                         <img src='./images/afropunk.svg' className={styles.logo}/>
                     </header>
                     <div className={styles.divBtn}>
-                        <button className={styles.btnVoltar}>Voltar</button>
+                        <a href="/"><button className={styles.btnVoltar}>Voltar</button></a>
                     </div>
                     <div>
                         <form className={styles.forms}>

@@ -19,28 +19,29 @@
 .header {
   display: flex;
   width: 100%;
-  height: 7rem;
+  /* height: 11.2rem; */
+  height: 10.4rem;
   justify-content: center;
-  margin-top: 3.9rem;
+  margin-top: 6.2rem;
 }
 
 .logo {
-  width: 20.85088rem;
-  height: 2.625rem;
+  width: 33.36rem;
+  height: 4.2rem;
 }
 
 .divBtn {
   width: 100vh;
-  margin-right: 13rem;
+  margin-right: 20.8rem;
 }
 
 .btnVoltar {
-  width: 7rem;
-  height: 2.2rem;
+  width: 11.2rem;
+  height: 3.6rem;
   background: none;
   border: 1.7px solid #04d924;
   color: #f5f5f5;
-  font-size: 1.25rem;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -48,12 +49,12 @@
 }
 
 .btnEntrar {
-  width: 30rem;
-  height: 2.8rem;
-  border-radius: 0.46325rem;
+  width: 48.1rem;
+  height: 4.5rem;
+  border-radius: 0.75rem;
   background: #04d924;
   color: #f5f5f5;
-  font-size: 1.85rem;
+  font-size: 3rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -63,19 +64,19 @@
 .forms {
   display: flex;
   flex-direction: column;
-  width: 35rem;
-  height: 34rem;
+  width: 56rem;
+  height: 54.4rem;
 }
 
 .forms h1 {
   color: #f5f5f5;
   color: #f5f5f5;
-  font-size: 3.89375rem;
+  font-size: 6.23rem;
   font-family: Poppins;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  padding-bottom: 4.19rem;
+  padding-bottom: 6.7rem;
 }
 
 .forms input {
@@ -84,7 +85,7 @@
   width: 100%;
   padding: 10px 0;
   color: rgba(245, 245, 245, 0.5);
-  font-size: 1.66763rem;
+  font-size: 2.67rem;
   font-family: Poppins;
   font-style: normal;
   font-weight: 500;
@@ -93,21 +94,21 @@
   border-bottom: 1px solid rgba(245, 245, 245, 0.5);
   background: transparent;
   outline: none;
-  margin-bottom: 3.15rem;
+  margin-bottom: 5.04rem;
 }
 
 .send {
-  margin-top: 5rem;
+  margin-top: 8rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2.3rem;
+  gap: 3.68rem;
 }
 
 .send p {
   color: #f5f5f5;
-  font-size: 1.48238rem;
+  font-size: 2.4rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -115,5 +116,6 @@
 
 .send a {
   text-decoration: none;
+  font-size: 2.4rem;
   color: #04d924;
 }

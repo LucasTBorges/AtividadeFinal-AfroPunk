@@ -2,6 +2,7 @@ import styles from '@/styles/header.module.css'
 import Image from 'next/image'
 import Logo from "./../../../public/images/afropunk.svg"
 import Login from "./../../../public/images/login.svg"
+import Link from 'next/link'
 
 export default function Header() {
   return (
@@ -18,8 +19,8 @@ export default function Header() {
             <a>Galeria</a>
         </nav>
         <nav className={styles.nav2}>
-            <a>COMPRAR</a>
-            <Image src={Login} alt="" />
+            <a id={styles.comprar}>COMPRAR</a>
+            <a id={styles.casa} href="/login"><Image src={Login} alt="" /></a>
         </nav>
       </header>
     </>

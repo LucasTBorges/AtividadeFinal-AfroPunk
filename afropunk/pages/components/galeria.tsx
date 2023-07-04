@@ -13,9 +13,10 @@ import Foto9 from './../../public/images/Rectangle 140.svg'
 export default function Galeria() {
   return (
     <>
-        <section className={styles.section}>
+        <section id='galeria' className={styles.section}>
             <div className={styles.div1}>
                 <h2>Galeria</h2>
+                <div className={styles.divaleatoria}></div>
             </div>
             <div className={styles.div2}>
                 <Image src={Foto1} alt="" />

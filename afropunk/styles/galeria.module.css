@@ -10,7 +10,6 @@
 }
 
 .div1 {
-    padding-left: 40.8rem;
     width: 100%;
 }
 
@@ -19,8 +18,12 @@
     font-size: 16rem;
     color: #F5F5F5;
     display: flex;
-    justify-content: flex-start;
-    border-bottom: 3px solid #F5F5F5;
+    justify-content: center;
+}
+
+.divaleatoria {
+    border-top: 3px solid #F5F5F5;
+    margin-left: calc(50% - 31.15rem);
 }
 
 .div2 {

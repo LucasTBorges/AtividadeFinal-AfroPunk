@@ -16,7 +16,7 @@ export default function Footer() {
                     <a>Sobre Nós</a>
                     <a>Line-up</a>
                     <a>Ingressos</a>
-                    <a>Galeria</a>
+                    <Link href='#galeria'>Galeria</Link>
                 </nav>
                 <nav className={styles.nav2}>
                     <a>Facebook</a>

@@ -32,6 +32,8 @@
 
 .nav1>a, .nav2>a, .nav3>a {
     font-size: 1.26rem;
+    text-decoration: none;
+    color: inherit;
 }
 
 #h2 {

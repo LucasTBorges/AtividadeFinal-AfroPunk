@@ -16,7 +16,7 @@ export default function Header() {
             <a>Sobre</a>
             <a>Line-up</a>
             <a>Ingressos</a>
-            <a>Galeria</a>
+            <a href='#galeria'>Galeria</a>
         </nav>
         <nav className={styles.nav2}>
             <a id={styles.comprar}>COMPRAR</a>

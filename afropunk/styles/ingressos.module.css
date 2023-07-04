@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins&display=swap');
+
+.section {
+    background-color: #0D0D0D;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section>h2, .section>h3, .section>a {
+    font-family: 'Audiowide';
+    color: #F5F5F5;
+    font-weight: 400;
+}
+
+.section>h2 {
+    font-size: 17.4rem;
+}
+
+.section>h3 {
+    font-family: 'Poppins';
+    font-size: 4rem;
+}
+
+.section>a {
+    font-size: 4rem;
+    color: #04D924;
+}
+
+.ingressos {
+    display: flex;
+    gap: 1rem;
+}

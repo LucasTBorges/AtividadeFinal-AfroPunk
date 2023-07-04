@@ -1,7 +1,6 @@
 import styles from '@/styles/footer.module.css'
 import Image from 'next/image'
 import Logo from "./../../public/images/afropunk.svg"
-import Login from "./../../public/images/login.svg"
 import Link from 'next/link'
 
 export default function Footer() {

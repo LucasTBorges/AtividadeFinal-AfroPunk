@@ -7,6 +7,7 @@ import { JWT } from "next-auth/jwt";
 export const authOptions:NextAuthOptions = {
   providers: [
     CredentialsProvider({//Provider para autenticação com username e senha
+        id: 'credentials',
         name: 'Username & Senha',
         credentials: {
           email: { label: "Email", type: "text", placeholder: "exemplo@exemplo.com" },

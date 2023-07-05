@@ -5,8 +5,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 12.6rem 0rem;
-    gap: 12.6rem;
+    padding: 6.4rem 0rem 12.6rem;
+    gap: 12.7rem;
 }
 
 .div1 {

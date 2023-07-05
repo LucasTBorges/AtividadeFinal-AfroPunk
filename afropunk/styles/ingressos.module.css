@@ -5,29 +5,66 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 23.3rem;
+    padding: 11.65rem 0rem 6.4rem; /* 11.65rem é apenas metade */
 }
 
-.section>h2, .section>h3, .section>a {
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.divh2>h2, .text>h3, .bottom>a {
     font-family: 'Audiowide';
     color: #F5F5F5;
     font-weight: 400;
 }
 
-.section>h2 {
+.divh2 {
+    display: flex;
+    flex-direction: column;
+    gap: 6.25rem;
+    margin: 0rem 16.9rem;
+    width: 100%;
+}
+
+.linha1 {
+    border: 1px solid #04D924;
+    margin-right: 50%;
+}
+
+.linha2 {
+    border: 1px solid #04D924;
+    margin-left: 50%;
+}
+
+.divh2>h2 {
+    display: flex;
+    align-self: flex-start;   
     font-size: 17.4rem;
 }
 
-.section>h3 {
+#h3top {
+    padding-top: 9rem;
+}
+
+.text>h3 {
     font-family: 'Poppins';
     font-size: 4rem;
 }
 
-.section>a {
-    font-size: 4rem;
-    color: #04D924;
-}
-
 .ingressos {
     display: flex;
-    gap: 1rem;
+    gap: 3.8rem;
+    padding-top: 21.6rem;
+    padding-bottom: calc(13.2rem + 3.25rem);
+}
+
+.bottom>a {
+    font-size: 4rem;
+    color: #04D924;
+    border: 1px solid #04D924;
+    border-radius: 1.55rem;
+    padding: 3.25rem 2.6rem;
 }

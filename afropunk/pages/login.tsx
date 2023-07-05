@@ -1,5 +1,5 @@
 "use client"
-import styles from '@/styles/Forms.module.css'
+import styles from '@/styles/forms.module.css'
 import { signIn } from 'next-auth/react'
 import { useRef } from 'react'
 
@@ -20,10 +20,10 @@ export default function Login(){
             <main className={styles.main}>
                 <section className={styles.section}>
                     <header className={styles.header}>
-                        <img src='./images/afropunk.svg' className={styles.logo}/>
+                        <img src='./images/afropunk.svg'/>
                     </header>
                     <div className={styles.divBtn}>
-                        <a href="/"><button className={styles.btnVoltar}>Voltar</button></a>
+                        <a href="/"><button>Voltar</button></a>
                     </div>
                     <div>
                         <form className={styles.forms}>
@@ -33,8 +33,8 @@ export default function Login(){
                                 <input onChange={(e) => (senha.current = e.target.value)} type='password' placeholder='Senha'/>
                             </div>
                             <div className={styles.send}>
-                                <button onClick={onSubmit} className={styles.btnEntrar}>Entrar</button>
-                                <p>Não tem conta? <a href='#'>Crie agora</a>!</p>
+                                <button onClick={onSubmit}>Entrar</button>
+                                <p>Não tem conta? <a href='/register'>Crie agora</a>!</p>
                             </div>
                         </form>
                     </div>

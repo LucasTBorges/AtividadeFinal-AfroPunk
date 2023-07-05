@@ -19,13 +19,12 @@
 .header {
   display: flex;
   width: 100%;
-  /* height: 11.2rem; */
   height: 10.4rem;
   justify-content: center;
   margin-top: 6.2rem;
 }
 
-.logo {
+.header img {
   width: 33.36rem;
   height: 4.2rem;
 }
@@ -35,7 +34,7 @@
   margin-right: 20.8rem;
 }
 
-.btnVoltar {
+.divBtn button {
   width: 11.2rem;
   height: 3.6rem;
   background: none;
@@ -48,7 +47,7 @@
   cursor: pointer;
 }
 
-.btnEntrar {
+.send button {
   width: 48.1rem;
   height: 4.5rem;
   border-radius: 0.75rem;
@@ -59,6 +58,7 @@
   font-weight: 500;
   line-height: normal;
   cursor: pointer;
+  font-family: Poppins;
 }
 
 .forms {
@@ -69,7 +69,6 @@
 }
 
 .forms h1 {  
-  color: #f5f5f5;
   color: #f5f5f5;
   font-size: 6.23rem;
   font-family: Poppins;
@@ -99,11 +98,13 @@
 
 .send {
   margin-top: 8rem;
+  margin-bottom: 18rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 3.68rem;
+  font-family: Poppins;
 }
 
 .send p {
@@ -118,4 +119,55 @@
   text-decoration: none;
   font-size: 2.4rem;
   color: #04d924;
+}
+
+.register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vh;
+  height: 54.4rem;
+}
+
+.register h1 {  
+  color: #f5f5f5;
+  font-size: 4.8rem;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding-bottom: 6.7rem;
+}
+
+.register input {
+  width: 53.1rem;
+  padding: 10px 0;
+  color: rgba(245, 245, 245, 0.5);
+  font-size: 2.67rem;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border: none;
+  border-bottom: 1px solid rgba(245, 245, 245, 0.5);
+  background: transparent;
+  outline: none;
+  margin-bottom: 5.04rem;
+}
+
+.register div {
+  display: flex;
+}
+
+.registerForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.registerForm div {
+  gap: 5.1rem;
+}
+
+.age {
+  width: 53.1rem;
 }

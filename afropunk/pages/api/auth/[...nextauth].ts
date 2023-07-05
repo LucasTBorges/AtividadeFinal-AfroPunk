@@ -56,6 +56,7 @@ export const authOptions:NextAuthOptions = {
         }
     },
     pages: {//Caso criemos uma página customizada para substituir uma página padrão do nextauth, devemos informar aqui
+      signIn: '/login'
     }
 }
 export default NextAuth(authOptions)

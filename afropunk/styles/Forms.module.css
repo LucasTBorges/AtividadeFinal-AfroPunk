@@ -171,3 +171,47 @@
 .age {
   width: 53.1rem;
 }
+
+@media (max-width: 390px){
+  .header img {
+    width: 28.4rem;
+    height: 3.5rem;
+  }
+
+  .forms {
+    width: auto;
+    height: auto;
+  }
+  .forms h1 {
+    font-size: 3.2rem;
+    margin-top: 2.5rem;
+    padding-bottom: 4rem;
+
+  }
+  .forms input {
+    width: 27.3rem;
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+  }
+  .divBtn{
+    width: auto;
+    margin-left: 0;
+  }
+  .divBtn button {
+    width: 7.2rem;
+    height: 2.3rem;
+    font-size: 1.27rem;
+  }
+  .send {
+    margin-top: 5.2rem;
+    gap: 2.4rem;
+  }
+  .send button{
+    width: 24.7rem;
+    height: 2.32rem;
+    font-size: 1.5rem;
+  }
+  .send p,.send a {
+    font-size: 1.22rem;
+  }
+}

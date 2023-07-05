@@ -24,7 +24,7 @@ export default function Register() {
                                 <input type='password' placeholder='Senha'/>
                             </div>
                             <div className={styles.age}>
-                                <input type='number' placeholder='Idade'/>
+                                <input type='number' min={0} placeholder='Idade'/>
                             </div>
                             </div>
                             <div className={styles.send}>

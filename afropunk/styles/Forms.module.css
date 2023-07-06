@@ -202,6 +202,7 @@
     height: 2.3rem;
     font-size: 1.27rem;
   }
+  /* Essa parte é exclusiva da página login */
   .send {
     margin-top: 5.2rem;
     gap: 2.4rem;
@@ -214,4 +215,6 @@
   .send p,.send a {
     font-size: 1.22rem;
   }
+
+  /* Essa parte é da página Register */
 }

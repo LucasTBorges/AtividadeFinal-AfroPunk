@@ -1,45 +1,59 @@
-"use client"
-import styles from '@/styles/forms.module.css'
-import { signIn } from 'next-auth/react'
-import { useRef } from 'react'
+"use client";
+import styles from "@/styles/forms.module.css";
+import type {
+  GetServerSidePropsContext,
+  InferGetServerSidePropsType,
+} from "next";
+import { getCsrfToken } from "next-auth/react";
+import Link from 'next/link'
 
-export default function Login(){
-    const email = useRef("")
-    const senha = useRef("")
+export default function Login({
+  csrfToken,
+}: InferGetServerSidePropsType<typeof getServerSideProps>) {
+  return (
+    <>
+      <main className={styles.main}>
+        <section className={styles.section}>
+          <header className={styles.header}>
+            <img src="./images/afropunk.svg" />
+          </header>
+          <div className={styles.divBtn}>
+            <a href="/">
+              <button>Voltar</button>
+            </a>
+          </div>
+          <div>
+            <form
+              className={styles.forms}
+              method="post"
+              action="/api/auth/callback/credentials"
+            >
+              <h1>Login</h1>
+              <input name="csrfToken" type="hidden" defaultValue={csrfToken} />
+              <label>
+                <input name="email" type="text" placeholder="E-mail" />
+              </label>
+              <label>
+                <input name="password" type="password" placeholder="Senha" />
+              </label>
+              <div className={styles.send}>
+                <button type="submit">Entrar</button>
+                <p>
+                  Não tem conta? <a href="/register">Crie agora</a>!
+                </p>
+              </div>
+            </form>
+          </div>
+        </section>
+      </main>
+    </>
+  );
+}
 
-    const onSubmit = async () => {
-        const result = await signIn("credentials", {
-            email: email.current,
-            password: senha.current,
-            redirect:true,
-            callbackUrl:"/",
-        })
-    }
-    return(
-        <>
-            <main className={styles.main}>
-                <section className={styles.section}>
-                    <header className={styles.header}>
-                        <img src='./images/afropunk.svg'/>
-                    </header>
-                    <div className={styles.divBtn}>
-                        <a href="/"><button>Voltar</button></a>
-                    </div>
-                    <div>
-                        <form className={styles.forms}>
-                            <h1>Login</h1>
-                            <div>
-                                <input onChange={(e) => (email.current = e.target.value)} type='email' placeholder='E-mail'/>
-                                <input onChange={(e) => (senha.current = e.target.value)} type='password' placeholder='Senha'/>
-                            </div>
-                            <div className={styles.send}>
-                                <button onClick={onSubmit}>Entrar</button>
-                                <p>Não tem conta? <a href='/register'>Crie agora</a>!</p>
-                            </div>
-                        </form>
-                    </div>
-                </section>
-            </main>
-        </>
-    )
+export async function getServerSideProps(context: GetServerSidePropsContext) {
+  return {
+    props: {
+      csrfToken: await getCsrfToken(context),
+    },
+  };
 }

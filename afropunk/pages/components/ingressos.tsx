@@ -1,6 +1,5 @@
 import styles from '@/styles/ingressos.module.css'
 import Ingresso from './ingresso'
-import Image from 'next/image'
 
 export default function Ingressos() {
   return (

@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins:wght@900&display=swap');
+
+.section {
+    background-color: #0D0D0D;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 8.7rem;  /* 8.7rem é apenas metade */ 
+    padding-bottom: 11.65rem; /*11.65rem é apenas metade*/
+}
+
+.titulo>h2 {
+    font-family: 'Audiowide';
+    font-size: 19.1rem;
+    font-weight: 400;
+    color: #F5F5F5;
+}
+
+.titulo>h2>span {
+    font-family: 'Audiowide';
+    font-size: 19.1rem;
+    font-weight: 400;
+    color: #04D924;
+}
+
+.text1, .text2, .text3 {
+    display: flex;
+    align-items: center;
+}
+
+.text2p, .nomegrande {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text1>h5, .text2>h5, .text3>h5 {
+    font-family: 'Audiowide';
+    font-weight: 400;
+    color: #F5F5F5
+}
+
+.text1>h5 {
+    font-size: 7.2375rem;
+}
+
+.text2>h5 {
+    font-size: 5.4516rem;
+}
+
+.text3>h5 {
+    font-size: 10rem;
+}
+
+.text1>h3 {
+    font-family: 'Poppins';
+    font-size: 5.32rem;
+    font-weight: 900;
+    color: #04D924;
+}
+
+.text2>h4, .nomegrande>h4 {
+    font-family: 'Poppins';
+    font-size: 4rem;
+    font-weight: 900;
+    color: #F5F5F5;
+}
+
+.text3>h3 {
+    font-family: 'Poppins';
+    font-size: 7.37rem;
+    font-weight: 900;
+    color: #04D924;
+}
+
+.bottom {
+    width: 25.2rem;
+    height: 12.5rem;
+    background-color: #04D924;
+    border-radius: 5.0875rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom>a {    
+    font-family: 'Poppins';
+    font-size: 13.82rem;
+    font-weight: 900;
+    color: #FFF;
+}

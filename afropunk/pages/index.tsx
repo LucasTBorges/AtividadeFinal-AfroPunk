@@ -2,6 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
 import Header from './components/header'
+import Sobrenos from './components/sobrenos'
+import Lineup from './components/lineup'
 import Ingressos from './components/ingressos'
 import Galeria from './components/galeria'
 import Footer from './components/footer'
@@ -17,6 +19,8 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <Header />
+        <Sobrenos />
+        <Lineup />
         <Ingressos />
         <Galeria />
         <Footer />

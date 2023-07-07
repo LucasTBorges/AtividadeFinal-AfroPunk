@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins:wght@500&display=swap');
+
+.section {
+    background-color: #0D0D0D;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 12.338rem; /* total, porém ainda não é certeza do valor */ 
+    padding-bottom: 8.7rem; /* 8.7rem é apenas metade */    
+}
+
+.div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8.422rem;
+    margin: 0rem 15.5rem;
+}
+
+.titulo {
+    display: flex;
+    flex-direction: column;
+    gap: 2.03rem;
+}
+
+.linha1 {
+    border: 2px solid #FFF;
+    margin-right: calc(50% - 11.31rem);
+}
+
+.linha2 {
+    border: 2px solid #FFF;
+    margin-left: calc(50% - 11.31rem);
+}
+
+.titulo>h2 {
+    display: flex;
+    align-self: flex-start;
+    font-family: 'Audiowide';
+    font-size: 8.48rem;
+    font-weight: 400;
+    color: #fff;
+}
+
+.paragrafo {
+    /* max-width: 80%; */
+}
+
+.paragrafo>p {
+    font-family: 'Poppins';
+    font-size: 2.78rem;
+    font-weight: 500;
+    color: #F5F5F5;
+    line-height: 187%;
+}

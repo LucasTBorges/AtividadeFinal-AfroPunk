@@ -1,13 +1,21 @@
 import styles from "@/styles/account.module.css";
+import InfoCard from "./components/modal";
+import React, { useState } from 'react';
 
 export default function Account() {
+    const [infoCardVisible, setInfoCardVisible] = useState<boolean>(false);
+
+    const handleVisible = () => {
+        setInfoCardVisible(!infoCardVisible);
+    };
     return (
         <>
             <main className={styles.main}>
+                {infoCardVisible && <InfoCard/>}
                 <header>
                     <p>.</p>
                     <img className={styles.logo} src="./images/afropunk.svg"/>
-                    <button><img className={styles.profile} src="./images/myaccount.svg"/></button>
+                    <button onClick={handleVisible}><img className={styles.profile} src="./images/myaccount.svg"/></button>
                 </header>
                 <section>
                     <div className={styles.menu}>

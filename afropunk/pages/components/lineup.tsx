@@ -1,5 +1,7 @@
 import styles from '@/styles/lineup.module.css'
 import Image from 'next/image'
+import Liniker from './../../public/images/liniker.svg'
+import Emicida from './../../public/images/emicida.svg'
 
 export default function Lineup() {
   return (
@@ -10,8 +12,8 @@ export default function Lineup() {
                     <h2>L<span>i</span>ne-<span>u</span>p</h2>
                 </div>
                 <div className={styles.images}>
-                    <Image src="" alt="" />
-                    <Image src="" alt="" />
+                    <Image src={Liniker} alt="" width={543} height={305} />
+                    <Image src={Emicida} alt="" width={545} height={341} />
                 </div>
                 <div className={styles.text1}>
                     <h3>LINIKER</h3>

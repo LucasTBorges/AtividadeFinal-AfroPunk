@@ -23,6 +23,11 @@
     color: #04D924;
 }
 
+.images {
+    padding: 15.615rem 0rem 5.352rem;
+    display: flex;
+}
+
 .text1, .text2, .text3 {
     display: flex;
     align-items: center;
@@ -71,6 +76,18 @@
     font-size: 7.37rem;
     font-weight: 900;
     color: #04D924;
+}
+
+.text2p {
+    gap: 2rem;
+}
+
+.text2 {
+    gap: 1rem;
+}
+
+.text3 {
+    padding: 0.975rem 0rem 8.425rem;
 }
 
 .bottom {

@@ -43,10 +43,6 @@
     color: #fff;
 }
 
-.paragrafo {
-    /* max-width: 80%; */
-}
-
 .paragrafo>p {
     font-family: 'Poppins';
     font-size: 2.78rem;

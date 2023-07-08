@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins&display=swap');
+
+.section {
+    background-color: #0D0D0D;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 12.338rem; /* total, porém ainda não é certeza do valor */  
+}
+
+.slogan {
+    display: flex;
+}
+
+.icones {
+    display: flex;
+    flex-direction: column;
+}
+
+.slogan>div>h2 {
+    font-family: 'Audiowide';
+    font-size: 7.5491rem;
+    font-weight: 400;
+    color: #F5F5F5;
+}
+
+.slogan>div>h2>span {
+    font-family: 'Audiowide';
+    font-size: 7.5491rem;
+    font-weight: 400;
+    color: #04D924;
+}
+
+.slogan>div>div>div>a {
+    font-family: 'Audiowide';
+    font-size: 2.8784rem;
+    font-weight: 400;
+}
+
+.x>div>h3 {
+    font-family: 'Audiowide';
+    font-size: 4.566rem;
+    font-weight: 400;
+}
+
+.branco {
+    background-color: #F5F5F5;
+    transform: rotate(7.658deg);
+}
+
+.verde {
+    background-color: #04D924;
+    transform: rotate(-5.398deg);
+}
+
+.branco>h3 {
+    color: #04D924;
+}
+
+.verde>h3 {
+    color: #F5F5F5;
+    width: 100%;
+}

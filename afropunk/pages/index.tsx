@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
 import Header from './components/header'
+import Slogan from './components/slogan'
 import Sobrenos from './components/sobrenos'
 import Lineup from './components/lineup'
 import Ingressos from './components/ingressos'
@@ -19,6 +20,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <Header />
+        <Slogan />
         <Sobrenos />
         <Lineup />
         <Ingressos />

@@ -5,7 +5,6 @@ import type {
   InferGetServerSidePropsType,
 } from "next";
 import { getCsrfToken } from "next-auth/react";
-import Link from 'next/link'
 
 export default function Login({
   csrfToken,
@@ -15,7 +14,7 @@ export default function Login({
       <main className={styles.main}>
         <section className={styles.section}>
           <header className={styles.header}>
-            <a href="/"><img src="./images/afropunk.svg" /></a>
+            <a href="/"><img src="./images/afropunk.svg" alt="Logotipo do Afropunk"/></a>
           </header>
           <div className={styles.divBtn}>
             <a href="/">
@@ -55,5 +54,5 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
     props: {
       csrfToken: await getCsrfToken(context),
     },
-  };
+  }; 
 }

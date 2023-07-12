@@ -47,7 +47,7 @@ export default function Register() {
       <main className={styles.main}>
         <section className={styles.section}>
           <header className={styles.header}>
-            <img src="./images/afropunk.svg" className={styles.logo} />
+            <img src="./images/afropunk.svg" alt="Logotipo do Afropunk" className={styles.logo} />
           </header>
           <div className={styles.divBtn}>
             <a href="/">

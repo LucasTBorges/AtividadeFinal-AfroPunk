@@ -69,9 +69,9 @@ export default function Account() {
         {infoCardVisible && <InfoCard />}
         <header>
           <p>.</p>
-          <img className={styles.logo} src="./images/afropunk.svg" />
+          <a href="/"><img className={styles.logo} src="./images/afropunk.svg" alt="Logotipo do Afropunk"/></a>
           <button onClick={handleVisible}>
-            <img className={styles.profile} src="./images/myaccount.svg" />
+            <img className={styles.profile} src="./images/myaccount.svg" alt="ícone para informações da conta" />
           </button>
         </header>
         <section>

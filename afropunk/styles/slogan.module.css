@@ -6,7 +6,10 @@
     flex-direction: column;
     align-items: center;
     padding-top: 18.4rem;
-    padding-bottom: 12.338rem; /* total, porém ainda não é certeza do valor */  
+    padding-bottom: 6.7895rem; /* 6.7895rem é apenas metade */
+    background-image: url('./../public/images/background.svg');
+    background-size: cover;
+    background-position: center;  
 }
 
 /* div slogan */
@@ -45,6 +48,12 @@
     padding-bottom: 2.3rem; /* por conta do padding do <a> */
 }
 
+.divtext {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .divtext>h2 {
     font-family: 'Audiowide';
     font-size: 7.5491rem;
@@ -77,7 +86,7 @@
 /* div info */
 .info {
     padding-top: 18.3rem;
-    padding-bottom: 6rem;
+    padding-bottom: 12.2rem;
     display: flex;
     width: 100%;
     justify-content: space-around;
@@ -147,20 +156,33 @@
 }
 
 /* div x */
+.x {
+    padding-top: 10rem; /* excedente da inclinação */
+    padding-bottom: 10rem;
+    display: flex;
+}
+
 .x>div>h3 {
     font-family: 'Audiowide';
     font-size: 4.566rem;
     font-weight: 400;
-}
-
-.branco {
-    background-color: #F5F5F5;
-    transform: rotate(7.658deg);
+    height: 10.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .verde {
     background-color: #04D924;
+    width: 5000rem;
     transform: rotate(-5.398deg);
+}
+
+.branco {
+    background-color: #F5F5F5;
+    width: 5000rem; 
+    margin-left: -5000rem;
+    transform: rotate(7.658deg);
 }
 
 .branco>h3 {
@@ -169,5 +191,4 @@
 
 .verde>h3 {
     color: #F5F5F5;
-    width: 100%;
 }

@@ -4,6 +4,7 @@ import Facebook from './../../public/images/facebook.svg'
 import Instagram from './../../public/images/instagram.svg'
 import Youtube from './../../public/images/youtube.svg'
 import Twitter from './../../public/images/twitter.svg'
+// import Background from './../../public/images/background.svg'
 
 export default function Slogan() {
   return (
@@ -52,14 +53,14 @@ export default function Slogan() {
                     </div>                    
                 </div>
             </div> 
-            {/* <div className={styles.x}>
-                <div className={styles.branco}>
-                    <h3>Viver o AFROPUNK é único • Uma experiência • Viver o AFROPUNK é único •  </h3>
-                </div>
+            <div className={styles.x}>
                 <div className={styles.verde}>
                     <h3>Viver o AFROPUNK é único • Uma experiência • Viver o AFROPUNK é único •  </h3>
                 </div>
-            </div>    */}
+                <div className={styles.branco}>
+                    <h3>Viver o AFROPUNK é único • Uma experiência • Viver o AFROPUNK é único •  </h3>
+                </div>                
+            </div>   
         </section>
     </>
   )

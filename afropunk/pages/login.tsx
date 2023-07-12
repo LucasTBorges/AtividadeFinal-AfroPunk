@@ -15,7 +15,7 @@ export default function Login({
       <main className={styles.main}>
         <section className={styles.section}>
           <header className={styles.header}>
-            <img src="./images/afropunk.svg" />
+            <a href="/"><img src="./images/afropunk.svg" /></a>
           </header>
           <div className={styles.divBtn}>
             <a href="/">

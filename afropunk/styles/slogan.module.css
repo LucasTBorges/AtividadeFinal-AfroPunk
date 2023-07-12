@@ -5,38 +5,148 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 18.4rem;
     padding-bottom: 12.338rem; /* total, porém ainda não é certeza do valor */  
 }
 
+/* div slogan */
 .slogan {
     display: flex;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
 .icones {
+    margin-left: -10rem;
     display: flex;
     flex-direction: column;
+    gap: 3.2rem;
 }
 
-.slogan>div>h2 {
+.icones>a {
+    cursor: pointer;
+}
+
+.bordericone {
+    padding: 2.6725rem;
+    display: flex;
+    align-self: center;
+    border: 0.848px solid #D9D9D9;
+    border-radius: 11.068px;
+}
+
+.text {
+    padding-top: 14.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12rem;
+    padding-bottom: 2.3rem; /* por conta do padding do <a> */
+}
+
+.divtext>h2 {
     font-family: 'Audiowide';
     font-size: 7.5491rem;
     font-weight: 400;
     color: #F5F5F5;
 }
 
-.slogan>div>h2>span {
+#texth2>span {
     font-family: 'Audiowide';
     font-size: 7.5491rem;
     font-weight: 400;
     color: #04D924;
 }
 
-.slogan>div>div>div>a {
+#texth2 {
+    padding-bottom: 2.3rem; /* por conta do padding do <a> */
+}
+
+.text>div>a {
     font-family: 'Audiowide';
     font-size: 2.8784rem;
     font-weight: 400;
+    color: #04D924;
+    border: 0.738px solid #04D924;
+    border-radius: 11.068px;
+    padding: 2.3rem;
+    cursor: pointer;
 }
 
+/* div info */
+.info {
+    padding-top: 18.3rem;
+    padding-bottom: 6rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    /* justify-content: space-evenly; */
+}
+
+.local {
+    padding-top: 3rem;
+    display: flex;
+    gap: 2.5rem;
+    max-width: 50%;
+}
+
+#locallinha {
+    border: 0.814px solid #04D924;
+    height: 10.7rem;
+    display: flex;
+    align-self: flex-end;
+    margin-top: 1.792rem; /* para comecar na altura do Salvador */
+}
+
+.localtext {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+.localtext>h3 {
+    font-family: 'Audiowide';    
+    font-size: 5.6rem;
+    font-weight: 400;
+}
+
+.localtext>p {
+    font-family: 'Poppins';
+    font-size: 2.9rem;
+    font-weight: 400;
+}
+
+.informacoes {
+    min-width: 50%;
+    display: flex;
+    /* justify-content: space-around; */
+    justify-content: space-evenly;
+}
+
+.infor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #04D924;
+    font-family: 'Audiowide';
+    font-weight: 400;
+}
+
+.infor>div {
+    border: 0.814px solid #04D924;
+    width: 5.8rem;
+}
+
+.infor>h3 {
+    font-size: 7.2rem;
+}
+
+.infor>p {
+    font-size: 3.2rem;
+}
+
+/* div x */
 .x>div>h3 {
     font-family: 'Audiowide';
     font-size: 4.566rem;

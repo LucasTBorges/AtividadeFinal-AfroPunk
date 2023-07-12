@@ -44,6 +44,7 @@ export default function Account() {
         } else {
             console.log('Erro ao atualizar o perfil: ', response.status);
         }
+        alert('Usuário atualizado')
     } catch (error){
         console.log('Erro ao atualizar o perfil:', error)
     }
@@ -58,7 +59,7 @@ export default function Account() {
     setPerfil(prevPerfil => ({
       ...prevPerfil,
       [name]: value !== "" ? value : "",
-    }) as Perfil); // Use non-null assertion operator here
+    }) as Perfil);
   };
   
   

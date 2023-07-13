@@ -2,19 +2,22 @@ import LoginHeader from "./components/loginheader";
 import styles from "@/styles/myticket.module.css";
 import { useState, useEffect } from "react";
 import { IngressoObj } from "@/services/services";
+import UserTicket from "./components/userticket";
 export default function MyTicket() {
-  const [active, setActive] = useState<boolean>(false);
-  const [closed, setClosed] = useState<boolean>(false);
-  const [tickets, setTickets] = useState<IngressoObj[] | null>(null);
-  const handleActive = () => {
-    setActive(true);
-    setClosed(false);
-  };
-
-  const handleClosed = () => {
-    setClosed(true);
-    setActive(false);
-  };
+    const [active, setActive] = useState<boolean>(false);
+    const [closed, setClosed] = useState<boolean>(false);
+    const [tickets, setTickets] = useState<IngressoObj[] | null>(null);
+  
+    const handleActive = () => {
+      setActive(true);
+      setClosed(false);
+    };
+  
+    const handleClosed = () => {
+      setClosed(true);
+      setActive(false);
+    };
+  
   useEffect(() => {
     const fetchTickets = async () => {
       try {
@@ -45,12 +48,11 @@ export default function MyTicket() {
             <button onClick={handleClosed}>Encerrados</button>
           </div>
           <div className={styles.myticket}>
-            {active && (
+          <UserTicket/>
+            {/* {active && (
               <>
-                {tickets ? (
-                  tickets.map((tickets) => (
-                    <p key={tickets.id}>{tickets.tipo}</p>
-                  ))
+                {tickets && tickets.length > 0 ? (
+                  tickets.map((ticket) => <p key={ticket.id}>{ticket.tipo}</p>)
                 ) : (
                   <>
                     <p>Não localizamos nenhum ingresso</p>
@@ -59,9 +61,7 @@ export default function MyTicket() {
                 )}
               </>
             )}
-            {closed && (
-                <p>Não localizamos nenhum ingresso</p>
-            )}
+            {closed && <p>Não localizamos nenhum ingresso</p>} */}
           </div>
         </section>
       </main>

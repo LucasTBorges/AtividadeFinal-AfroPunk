@@ -8,32 +8,6 @@
   height: 100vh;
   font-family: "Poppins", sans-serif;
 }
-.main header {
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  justify-content: space-between;
-  padding: 6rem 6rem;
-}
-
-.main header button {
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-.logo {
-  width: 33rem;
-  height: 4.2rem;
-  align-self: center;
-}
-
-.profile {
-  width: 6.4rem;
-  height: 6.4rem;
-  align-self: flex-end;
-}
 
 .menu {
   display: flex;

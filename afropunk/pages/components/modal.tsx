@@ -11,7 +11,7 @@ export default function InfoCard() {
           <p>Comprar</p>
         </div>
         </a>
-        <a><div>
+        <a href="/myticket"><div>
           <img src="../images/ticket.svg" alt="ícone de ingresso da aba meus ingressos"/>
           <p>Meus ingressos</p>
         </div>

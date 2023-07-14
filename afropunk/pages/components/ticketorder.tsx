@@ -1,4 +1,5 @@
 import styles from '@/styles/ticketorder.module.css'
+import { useState } from 'react'
 
 interface TicketOrderProps {
     pedido: number,

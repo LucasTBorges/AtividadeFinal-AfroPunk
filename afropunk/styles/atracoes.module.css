@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins:wght@700&display=swap');
+
+.section {
+    background-color: #0D0D0D;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 14.85rem;
+    padding-bottom: 7.76rem;
+}
+
+#linhatop {
+    border: 2.255px solid #F5F5F5;
+    margin-left: calc(50% - 20.85rem);
+}
+
+#linhabottom {
+    border: 2.255px solid #F5F5F5;
+    margin-right: calc(50% - 20.85rem);
+}
+
+.toptext {
+    display: flex;
+    width: 100%;
+    /* align-items: flex-start; */
+}
+
+.toptexta {
+    padding-top: 0.4rem; /* por conta da borda */
+    width: 50%;
+    margin-left: 9rem;
+}
+
+.toptexta>a {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 2.7rem;
+    color: #F5F5F5;
+    border: 1px solid #04D924;
+    padding: 0.4rem 3.3rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.toptexth1 {
+    width: 50%;
+    margin-left: calc(-23rem - 9rem);
+}
+
+.toptexth1>h1 {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 9.85rem;
+    color: #fff;
+}
+
+.botton {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 49%;
+}
+
+.column>h2 {
+    font-family: 'Audiowide';
+    font-weight: 400;
+    font-size: 4.8rem;
+    color: #04D924;
+}
+
+#linhacenter {
+    height: 100%;
+    /* width: 2px; */
+    border: 2px solid #04D924;
+    padding-top: 0rem;
+}

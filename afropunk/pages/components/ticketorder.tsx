@@ -1,18 +1,30 @@
 import styles from '@/styles/ticketorder.module.css'
-export default function TicketOrder() {
+
+interface TicketOrderProps {
+    pedido: number,
+    nome: string | undefined,
+    email: string | undefined,
+    tipo: string
+}
+export default function TicketOrder({pedido, nome = '', email = '', tipo}: TicketOrderProps) {
+    const numPedido = pedido
+    const nomeComprador = nome
+    const emailComprador = email
+    const tipoIngresso = tipo
+
     return (
         <>
             <main className={styles.mainOrder}>
                 <header className={styles.headerOrder}>
                     <div>
-                        <h1>Pedido nº S29637291</h1>
+                        <h1>Pedido nº {numPedido}</h1>
                         <div>
-                        <p>Nome do comprador</p>
-                        <p>Email do comprador</p>
+                        <p>{nomeComprador}</p>
+                        <p>{emailComprador}</p>
                         </div>
                     </div>
                     <div className={styles.divOrder}>
-                        <p>Nº do pedido: <br/> 000001</p>
+                        <p>Nº do pedido: <br/> {numPedido}</p>
                         <p>Compra APROVADA</p>
                     </div>
                 </header>
@@ -21,12 +33,12 @@ export default function TicketOrder() {
                     <div className={styles.sectionOrder}>
                         <div>
                             <p>PASSAPORTE ARENA</p>
-                            <p>26 e 27.11 | TIPO DO INGRESSO</p>
+                            <p className={styles.typeTicket}>26 e 27.11 | {tipoIngresso}</p>
                             <p>(2 days pass general admission)</p>
                             <p>Setor: <span>Arena</span></p>
                         </div>
                         <div className={styles.orderValue}>
-                            <p>Valor total: <br/> Valor do ingresso</p>
+                            <p>Valor total: <br/> R$ 0,00</p>
                         </div>
                     </div>
                 </section>

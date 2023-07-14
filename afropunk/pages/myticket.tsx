@@ -52,7 +52,7 @@ export default function MyTicket() {
             {active && (
               <>
                 {tickets && tickets.length > 0 ? (
-                  tickets.map((ticket) => <div className={styles.divTickets}><p key={ticket.id}><UserTicket/></p></div>)
+                  tickets.map((ticket) => <div className={styles.divTickets}><p key={ticket.id}><UserTicket id = {ticket.id} tipo = {ticket.tipo}/></p></div>)
                 ) : (
                   <>
                     <p>Não localizamos nenhum ingresso</p>

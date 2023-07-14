@@ -1,9 +1,34 @@
 import styles from '@/styles/userticket.module.css'
 import TicketOrder from './ticketorder'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import type { Perfil } from "@/services/services";
 
-export default function UserTicket() {
+interface UserTicketProps {
+    id: number,
+    tipo: string
+}
+
+export default function UserTicket({id, tipo}: UserTicketProps) {
     const [detailsVisible, setDetailsVisible] = useState<boolean>(false);
+    const [perfil, setPerfil] = useState<Perfil | null>(null);
+
+    useEffect(() => {
+      const fetchPerfil = async () => {
+        try {
+          const response = await fetch("/api/usuario/perfil");
+          if (response.ok) {
+            const data = await response.json();
+            setPerfil(data);
+          } else {
+            console.log("Erro ao obter perfil:", response.status);
+          }
+        } catch (error) {
+          console.log("Erro ao obter perfil:", error);
+        }
+      };
+      fetchPerfil();
+    }, []);
+
     const handleDetails = () => {
         setDetailsVisible(!detailsVisible);
     }
@@ -13,7 +38,7 @@ export default function UserTicket() {
     return(
         <>
             <main className={styles.main}>
-                {detailsVisible && (<div onClick={handleCloseModal}><TicketOrder/></div>)}
+                {detailsVisible && (<div onClick={handleCloseModal}><TicketOrder pedido={id} nome = {perfil?.nome} email = {perfil?.email} tipo = {tipo}/></div>)}
                 <img src="./images/ticketimg.svg" alt="" />
                 <div className={styles.info}>
                     <div className={styles.titlediv}>

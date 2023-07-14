@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;900&display=swap');
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #0D0D0D;
+}
+
+.section {
+    /* width: 81.6rem; */
+    width: 92.2rem; /* por conta dos ingressos */
+    padding-bottom: 5rem; /* valor médio */
+}
+
+.descricao {
+    padding-top: 3.5rem;
+}
+
+.descricao>h1 {
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 4.4rem;
+    color: #F5F5F5;
+}
+
+.paragrafos {
+    padding: 3rem 0rem 2.8rem;
+}
+
+.paragrafos>p {
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 2.4rem;
+    color: #F5F5F5;
+}
+
+#linha {
+    border: 1px solid #F5F5F5;
+    width: 100%;
+}
+
+#setabaixo {
+    display: flex;
+    justify-content: center;
+    padding: 2.4rem 0rem 5.6rem;
+}
+
+#setabaixo>a {
+    cursor: pointer;
+}
+
+.arena {
+    background-color: #F5F5F5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arena>h2 {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 4rem;
+    color: #022601;
+}
+
+.ingressos {
+    display: flex;
+    gap: 2.6rem;
+    flex-wrap: wrap;
+    padding: 3.8rem 0rem 3.5rem;
+}
+
+.card {
+    width: 44.8rem;
+    height: 12.2rem;
+    background-color: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.card>p {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #000;
+}
+
+.subtotal {
+    border: 1px solid #F5F5F5;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.1rem;
+}
+
+.subtotal>h2 {
+    font-family: 'Poppins';
+    font-weight: 900;
+    font-size: 2rem;
+    color: #FFF;
+}
+
+.subtotal>a {
+    font-family: 'Poppins';
+    font-weight: 900;
+    font-size: 1.6rem;
+    color: #F5F5F5;
+    background-color: #04D924;
+    border-radius: 7.5rem;
+    padding: 0.45rem 1.5rem;
+    cursor: pointer;
+}

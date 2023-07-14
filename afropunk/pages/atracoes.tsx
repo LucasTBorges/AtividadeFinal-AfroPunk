@@ -31,43 +31,53 @@ export default function Home() {
                 <div className={styles.column}>
                     <h2>17 novembro</h2>
                     <div>
-                        <div>
-                            <p></p>
-                            <h3></h3>
+                        <div className={styles.card1}>
+                            <p>18:00</p>
+                            <h3>DJ Tamy</h3>
                         </div>
-                        <div>
-                            <p></p>
-                            <h3></h3>
+                        <div className={styles.card2}>
+                            <p>19:00</p>
+                            <h3>Nic Dias</h3>
                         </div>                        
                     </div>
                     <div>
-                        <div>
-                            <p></p>
-                            <h3></h3>
+                        <div className={styles.card1}>
+                            <p>20:00</p>
+                            <h3>Psirico</h3>
                         </div>
-                        <div>
-                            <p></p>
-                            <h3></h3>
+                        <div className={styles.card2}>
+                            <p>21:00</p>
+                            <h3>Liniker</h3>
                         </div>                        
                     </div>
                     <div>
-                        <div>
-                            <p></p>
-                            <h3></h3>
+                        <div className={styles.card1}>
+                            <p>22:00</p>
+                            <h3>Yan Cloud</h3>
                         </div>
-                        <div>
-                            <p></p>
-                            <h3></h3>
+                        <div className={styles.card2}>
+                            <p>23:00</p>
+                            <h3>Emicida</h3>
                         </div>                        
                     </div>
                     <div>
-                        <div>
-                            <p></p>
-                            <h3></h3>
+                        <div className={styles.card1}>
+                            <p>00:00</p>
+                            <h3>Djonga</h3>
                         </div>
-                        <div>
-                            <p></p>
-                            <h3></h3>
+                        <div className={styles.card2}>
+                            <p>01:00</p>
+                            <h3>Margareth Menezes</h3>
+                        </div>                        
+                    </div>
+                    <div>
+                        <div className={styles.card1}>
+                            <p>02:00</p>
+                            <h3>Paulilo Paredão</h3>
+                        </div>
+                        <div className={styles.card2}>
+                            <p>03:00</p>
+                            <h3>Dawer</h3>
                         </div>                        
                     </div>
                 </div>
@@ -75,43 +85,53 @@ export default function Home() {
                 <div className={styles.column}>
                     <h2>18 novembro</h2>
                     <div>
-                        <div>
-                            <p></p>
-                            <h3></h3>
+                        <div className={styles.card1}>
+                            <p>18:00</p>
+                            <h3>DJ Tamy</h3>
                         </div>
-                        <div>
-                            <p></p>
-                            <h3></h3>
+                        <div className={styles.card2}>
+                            <p>19:00</p>
+                            <h3>N.I.N.A</h3>
                         </div>                        
                     </div>
                     <div>
-                        <div>
-                            <p></p>
-                            <h3></h3>
+                        <div className={styles.card1}>
+                            <p>20:00</p>
+                            <h3>A DAMA</h3>
                         </div>
-                        <div>
-                            <p></p>
-                            <h3></h3>
+                        <div className={styles.card2}>
+                            <p>21:00</p>
+                            <h3>ÀTOOXXÁ</h3>
                         </div>                        
                     </div>
                     <div>
-                        <div>
-                            <p></p>
-                            <h3></h3>
+                        <div className={styles.card1}>
+                            <p>22:00</p>
+                            <h3>Baco</h3>
                         </div>
-                        <div>
-                            <p></p>
-                            <h3></h3>
+                        <div className={styles.card2}>
+                            <p>23:00</p>
+                            <h3>Rayssa Dias</h3>
                         </div>                        
                     </div>
                     <div>
-                        <div>
-                            <p></p>
-                            <h3></h3>
+                        <div className={styles.card1}>
+                            <p>00:00</p>
+                            <h3>Ludmilla</h3>
                         </div>
-                        <div>
-                            <p></p>
-                            <h3></h3>
+                        <div className={styles.card2}>
+                            <p>01:00</p>
+                            <h3>Alcione</h3>
+                        </div>                        
+                    </div>
+                    <div>
+                        <div className={styles.card1}>
+                            <p>02:00</p>
+                            <h3>Damper</h3>
+                        </div>
+                        <div className={styles.card2}>
+                            <p>03:00</p>
+                            <h3>MartNália</h3>
                         </div>                        
                     </div>
                 </div>

@@ -25,7 +25,6 @@
 .toptext {
     display: flex;
     width: 100%;
-    /* align-items: flex-start; */
 }
 
 .toptexta {
@@ -68,6 +67,9 @@
     flex-direction: column;
     align-items: center;
     min-width: 49%;
+    padding: 0rem 3.7rem;
+    gap: 6.3rem;
+    padding-bottom: 9rem;
 }
 
 .column>h2 {
@@ -75,11 +77,46 @@
     font-weight: 400;
     font-size: 4.8rem;
     color: #04D924;
+    margin-bottom: -3.2rem; /* é diferente do gap */ 
 }
 
 #linhacenter {
-    height: 100%;
-    /* width: 2px; */
     border: 2px solid #04D924;
-    padding-top: 0rem;
+    padding-top: 3.05rem;
+}
+
+.card1, .card2 {
+    width: 38.9rem;
+    height: 8.8rem;
+    background-color: #04D924;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card2 {
+    margin-left: 25.6rem;
+}
+
+.card1>p, .card2>p {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 2rem;
+    color: #04D924;
+    background-color: #0D0D0D;
+    padding: 0rem 2.2rem;
+}
+
+.card1>h3, .card2>h3 {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 3.6rem;
+    color: #0D0D0D;
+}
+
+.column>div {
+    display: flex;
+    flex-direction: column;
+    gap: 6.3rem;
 }

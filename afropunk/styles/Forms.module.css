@@ -172,10 +172,148 @@
   width: 53.1rem;
 }
 
-@media (max-width: 390px){
+@media (max-width: 1024px){
   .header img {
-    width: 28.4rem;
+    width: 35rem;
+    height: 5rem;
+  }
+
+  .forms {
+    width: auto;
+    height: auto;
+  }
+  .forms h1 {
+    font-size: 6rem;
+    margin-top: 2.5rem;
+    padding-bottom: 4rem;
+
+  }
+  .forms input {
+    width: 55rem;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+  }
+  .divBtn{
+    width: auto;
+    margin: 2rem 70rem 1rem 0;
+    margin-left: 0;
+  }
+  .divBtn button {
+    width: 11rem;
     height: 3.5rem;
+    font-size: 2rem;
+  }
+  /* Essa parte é exclusiva da página login */
+  .send {
+    margin-top: 5.2rem;
+    gap: 2.4rem;
+  }
+  .send button{
+    width: 35rem;
+    height: 4rem;
+    font-size: 2.5rem;
+  }
+  .send p,.send a {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 800px){
+  .header img {
+    width: 35rem;
+    height: 8rem;
+  }
+
+  .forms {
+    width: auto;
+    height: auto;
+  }
+  .forms h1 {
+    font-size: 4.5rem;
+    margin-top: 2.5rem;
+    padding-bottom: 4rem;
+
+  }
+  .forms input {
+    width: 60rem;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+  }
+  .divBtn{
+    width: auto;
+    margin: 2rem 50rem 1rem 0;
+    margin-left: 0;
+  }
+  .divBtn button {
+    width: 10rem;
+    height: 4rem;
+    font-size: 1.8rem;
+  }
+  /* Essa parte é exclusiva da página login */
+  .send {
+    margin-top: 5.2rem;
+    gap: 2.4rem;
+  }
+  .send button{
+    width: 45rem;
+    height: 4rem;
+    font-size: 2.5rem;
+  }
+  .send p,.send a {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 640px){
+  .header img {
+    width: 35rem;
+    height: 5rem;
+  }
+
+  .forms {
+    width: auto;
+    height: auto;
+  }
+  .forms h1 {
+    font-size: 4rem;
+    margin-top: 2.5rem;
+    padding-bottom: 4rem;
+
+  }
+  .forms input {
+    width: 47rem;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+  }
+  .divBtn{
+    width: auto;
+    margin: 2rem 40rem 1rem 0;
+    margin-left: 0;
+  }
+  .divBtn button {
+    width: 8rem;
+    height: 3rem;
+    font-size: 1.5rem;
+  }
+  /* Essa parte é exclusiva da página login */
+  .send {
+    margin-top: 5.2rem;
+    gap: 2.4rem;
+  }
+  .send button{
+    width: 35rem;
+    height: 4rem;
+    font-size: 2.5rem;
+  }
+  .send p,.send a {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px){
+  .header img {
+    width: 35rem;
+    height: 5rem;
   }
 
   .forms {
@@ -189,12 +327,13 @@
 
   }
   .forms input {
-    width: 27.3rem;
-    font-size: 1.3rem;
+    width: 35rem;
+    font-size: 1.5rem;
     margin-bottom: 2.5rem;
   }
   .divBtn{
     width: auto;
+    margin: 4rem 28rem 1rem 0;
     margin-left: 0;
   }
   .divBtn button {
@@ -208,12 +347,12 @@
     gap: 2.4rem;
   }
   .send button{
-    width: 24.7rem;
-    height: 2.32rem;
-    font-size: 1.5rem;
+    width: 30rem;
+    height: 3rem;
+    font-size: 1.8rem;
   }
   .send p,.send a {
-    font-size: 1.22rem;
+    font-size: 1.3rem;
   }
 
   /* Essa parte é da página Register */

@@ -48,11 +48,11 @@ export default function MyTicket() {
             <button onClick={handleClosed}>Encerrados</button>
           </div>
           <div className={styles.myticket}>
-          <UserTicket/>
-            {/* {active && (
+            
+            {active && (
               <>
                 {tickets && tickets.length > 0 ? (
-                  tickets.map((ticket) => <p key={ticket.id}>{ticket.tipo}</p>)
+                  tickets.map((ticket) => <div className={styles.divTickets}><p key={ticket.id}><UserTicket/></p></div>)
                 ) : (
                   <>
                     <p>Não localizamos nenhum ingresso</p>
@@ -61,7 +61,7 @@ export default function MyTicket() {
                 )}
               </>
             )}
-            {closed && <p>Não localizamos nenhum ingresso</p>} */}
+            {closed && <p>Não localizamos nenhum ingresso</p>}
           </div>
         </section>
       </main>

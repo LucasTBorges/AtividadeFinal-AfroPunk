@@ -32,6 +32,9 @@
 }
 .info {
     width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
 }
 
 .titlediv {
@@ -44,9 +47,14 @@
     gap: 1.3rem;
 }
 
-.content button {
+.content .modalbtn {
     background: none;
     border: none;
     display: flex;
-    height: 2.4rem;
+    padding: 0;
+    gap: 1.2rem;
+    align-items: flex-end;
+}
+.modalbtn p {
+  color: #04D924;
 }

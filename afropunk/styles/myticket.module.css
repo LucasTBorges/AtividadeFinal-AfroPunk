@@ -50,12 +50,12 @@
 }
 
 .myticket {
-  margin: 12.8rem;
+  margin-top: 8rem;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 4.1rem;
+  overflow: auto;
 }
 
 .myticket p {

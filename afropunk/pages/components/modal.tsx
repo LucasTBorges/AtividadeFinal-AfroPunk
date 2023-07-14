@@ -6,6 +6,11 @@ export default function InfoCard() {
   return (
     <>
       <main className={styles.main}>
+        <a href="/account"><div>
+          <img src="../images/ticket.svg" alt="ícone de ingresso da aba minha conta"/>
+          <p>Minha conta</p>
+        </div>
+        </a>
         <a><div>
           <img src="../images/ticket.svg" alt="ícone de ingresso da aba comprar"/>
           <p>Comprar</p>

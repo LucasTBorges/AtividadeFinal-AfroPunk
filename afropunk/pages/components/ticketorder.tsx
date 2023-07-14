@@ -12,6 +12,19 @@ export default function TicketOrder({pedido, nome = '', email = '', tipo}: Ticke
     const nomeComprador = nome
     const emailComprador = email
     const tipoIngresso = tipo
+    const [value, setValue] = useState<number>(() => {
+        if (tipo === 'inteira') {
+            return 130;
+        } else if (tipo === 'meia') {
+            return 85;
+        } else {
+            return 95
+        }
+    });
+    function capitalize(str: string): string {
+        return str.charAt(0).toUpperCase() + str.slice(1);
+      }
+
 
     return (
         <>
@@ -34,12 +47,12 @@ export default function TicketOrder({pedido, nome = '', email = '', tipo}: Ticke
                     <div className={styles.sectionOrder}>
                         <div>
                             <p>PASSAPORTE ARENA</p>
-                            <p className={styles.typeTicket}>26 e 27.11 | {tipoIngresso}</p>
+                            <p className={styles.typeTicket}>26 e 27.11 | {capitalize(tipoIngresso)}</p>
                             <p>(2 days pass general admission)</p>
                             <p>Setor: <span>Arena</span></p>
                         </div>
                         <div className={styles.orderValue}>
-                            <p>Valor total: <br/> R$ 0,00</p>
+                            <p>Valor total: <br/> R$ {value.toFixed(2)}</p>
                         </div>
                     </div>
                 </section>

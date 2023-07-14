@@ -69,17 +69,27 @@
   line-height: normal;
 }
 
-.myticket button {
-  color: #04d924;
-  text-align: center;
-  font-family: Audiowide;
-  font-size: 28.784px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  cursor: pointer;
-  padding: 2.2rem;
-  border-radius: 1.1rem;
-  border: #04d924 0.07rem solid;
-  background: none;
+.myticket 
+
+.noTickets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.noTickets button {
+    color: #04d924;
+    width: fit-content;
+    text-align: center;
+    font-family: Audiowide;
+    font-size: 2.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+    padding: 2.2rem;
+    border-radius: 1.1rem;
+    border: #04d924 0.07rem solid;
+    background: none;
 }

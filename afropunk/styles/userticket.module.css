@@ -54,6 +54,7 @@
     padding: 0;
     gap: 1.2rem;
     align-items: flex-end;
+    cursor: pointer;
 }
 .modalbtn p {
   color: #04D924;

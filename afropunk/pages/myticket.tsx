@@ -3,10 +3,13 @@ import styles from "@/styles/myticket.module.css";
 import { useState, useEffect } from "react";
 import { IngressoObj } from "@/services/services";
 import UserTicket from "./components/userticket";
+import type { Perfil } from "@/services/services";
+
 export default function MyTicket() {
     const [active, setActive] = useState<boolean>(false);
     const [closed, setClosed] = useState<boolean>(false);
     const [tickets, setTickets] = useState<IngressoObj[] | null>(null);
+    const [perfil, setPerfil] = useState<Perfil | null>(null);
   
     const handleActive = () => {
       setActive(true);
@@ -17,6 +20,25 @@ export default function MyTicket() {
       setClosed(true);
       setActive(false);
     };
+
+    
+
+    useEffect(() => {
+      const fetchPerfil = async () => {
+        try {
+          const response = await fetch("/api/usuario/perfil");
+          if (response.ok) {
+            const data = await response.json();
+            setPerfil(data);
+          } else {
+            console.log("Erro ao obter perfil:", response.status);
+          }
+        } catch (error) {
+          console.log("Erro ao obter perfil:", error);
+        }
+      };
+      fetchPerfil();
+    }, []);
   
   useEffect(() => {
     const fetchTickets = async () => {
@@ -51,13 +73,18 @@ export default function MyTicket() {
             
             {active && (
               <>
-                {tickets && tickets.length > 0 ? (
-                  tickets.map((ticket) => <div className={styles.divTickets}><p key={ticket.id}><UserTicket id = {ticket.id} tipo = {ticket.tipo}/></p></div>)
-                ) : (
-                  <>
+                {tickets && tickets.length > 0 && (
+                  tickets.map((ticket) => <div className={styles.divTickets}><p key={ticket.id}><UserTicket id = {ticket.id} nome = {perfil?.nome} email={perfil?.email} tipo = {ticket.tipo}/></p></div>)
+                )}
+              </>
+            )}
+            {active && (
+              <>
+                {tickets && tickets.length === 0 && (
+                  <div className={styles.noTickets}>
                     <p>Não localizamos nenhum ingresso</p>
                     <button>COMPRAR INGRESSO</button>
-                  </>
+                </div>
                 )}
               </>
             )}

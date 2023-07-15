@@ -9,12 +9,19 @@
     font-family: 'Poppins';    
     font-weight: 600;
     height: 38.6rem;
+    width: 100%;
 }
 
 .div1 {
     display: flex;
     justify-content: space-between;
     padding: 0rem 5.8rem;
+}
+
+#logo {
+    display: flex;
+    width: 25.2rem;
+    height: 4.6rem;
 }
 
 .div2 {
@@ -47,4 +54,63 @@
     border-top: 0.75px solid #F5F5F5;
     padding-top: 1.8rem;
     margin: 0rem 5.8rem;
+}
+
+@media only screen and (max-width: 1024px) {
+    .div1 {
+        flex-direction: column;
+        align-items: center;
+        gap: 2.8rem;
+        width: 100%;
+    }
+    .div2 {
+        justify-content: space-between;
+        gap: 0rem;
+        width: 100vw;
+        padding: 0rem 5.8rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #h2 {
+        font-size: 1.25rem;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .div1 {
+        flex-direction: column;
+        align-items: center;
+        gap: 2.8rem;
+        width: 100%;
+    }
+    .div1>a {
+        align-self: center;
+    }
+    .div2 {
+        padding: 0rem 1rem;
+    }
+    #logo {
+        width: 13.2rem;
+        height: 1.97rem;
+    }
+    .div3 {
+        margin: 0rem 1rem;
+    }
+    .nav1, .nav2 {
+        font-size: 1.13rem;
+    }
+    .nav1 {
+        order: 3;
+    }
+    .nav2 {
+        order: 2;
+    }
+    .nav3>a {
+        font-size: 0.962rem;
+        order: 1;
+    }
+    #h2 {
+        font-size: 0.5rem;
+    }
 }

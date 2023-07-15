@@ -7,7 +7,7 @@ export default function Footer() {
     <>
       <footer className={styles.footer}>
         <div className={styles.div1}>
-            <a href='/'><Image src={Logo} alt="" width={252} height={46} /></a>
+            <a href='/'><Image id={styles.logo} src={Logo} alt="" /></a>
             <div className={styles.div2}>
                 <nav className={styles.nav1}>
                     <a href='/#inicio'>Inicio</a>

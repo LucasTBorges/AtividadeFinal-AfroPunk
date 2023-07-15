@@ -4,11 +4,11 @@ export default function HeaderModal() {
   return (
     <>
       <section className={styles.section}>
-        <a>Login</a>
-        <a>Sobre Nós</a>
-        <a>Line-up</a>
-        <a>Ingressos</a>
-        <a>Galeria</a>
+        <a href='/login'>Login</a>
+        <a href='/#sobrenos'>Sobre Nós</a>
+        <a href='/#line-up'>Line-up</a>
+        <a href='/#ingressos'>Ingressos</a>
+        <a href='/#galeria'>Galeria</a>
       </section>
     </>
   )

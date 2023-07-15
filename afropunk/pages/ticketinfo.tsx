@@ -1,6 +1,7 @@
 import styles from "@/styles/ticketinfo.module.css";
 import LoginHeaderWhite from "./components/loginheaderwhite";
 import { useRouter } from "next/router";
+import Payments from "./components/payments";
 
 export default function TicketInfo() {
     const router = useRouter();
@@ -14,6 +15,7 @@ export default function TicketInfo() {
       <main className={styles.mainTicketInfo}>
         <LoginHeaderWhite />
         <section>
+          <div>
           <div className={styles.detailsTickets}>
             <h1>Resumo da compra</h1>
             <div className={styles.detailsTicketsTitle}>
@@ -30,7 +32,13 @@ export default function TicketInfo() {
             <div className={styles.ticketValue}>
               <p>R$ {valortotal.toFixed(2)}</p>
             </div>
+            <div className={styles.paymentFooter}>
+              <p>Métodos de pagamento</p>
+              <img src="./images/paymentsmethod.svg" />
+            </div>  
           </div>
+          </div>
+          
           <div className={styles.ticketForms}>
             <div className={styles.ticketInfor}>
               <span>1</span>
@@ -50,14 +58,16 @@ export default function TicketInfo() {
             </div>
             <div className={styles.paymentsInfor}>
               <span>2</span>
-              <h2>Informações de pagamento</h2>
+              <div>
+                <h2>Informações de pagamento</h2>
+                <div>
+                  <Payments/>
+                </div>
+              </div>
             </div>
           </div>
         </section>
-        <footer>
-          <p>Métodos de pagamento</p>
-          <img src="./images/paymentsmethod.svg" />
-        </footer>
+        
       </main>
     </>
   );

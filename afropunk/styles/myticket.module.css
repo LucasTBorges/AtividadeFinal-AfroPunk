@@ -69,8 +69,6 @@
   line-height: normal;
 }
 
-.myticket 
-
 .noTickets {
   display: flex;
   flex-direction: column;
@@ -92,4 +90,103 @@
     border-radius: 1.1rem;
     border: #04d924 0.07rem solid;
     background: none;
+}
+
+@media (max-width: 800px){
+  .title h1 {
+    font-size: 3rem;
+  }
+  .menu {
+    margin-top: 2rem;
+  }
+  .menu button {
+    font-size: 2rem;
+    padding: 0.5rem;
+  }
+
+  .myticket {
+    margin: 4rem 0 8rem 0;
+  }
+
+  .myticket p {
+    font-size: 2.5rem;
+  }
+  .noTickets {
+    gap: 2.5rem;
+  }
+  .noTickets button {
+    font-size: 1.8rem;
+    height: 3rem;
+    padding: 2rem;
+    border: #04d924 0.03rem solid;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (max-width: 640px){
+  .title h1 {
+    font-size: 3rem;
+  }
+  .menu {
+    margin-top: 2rem;
+  }
+  .menu button {
+    font-size: 2rem;
+    padding: 0.5rem;
+  }
+
+  .myticket {
+    margin: 4rem 0 8rem 0;
+  }
+
+  .myticket p {
+    font-size: 2rem;
+  }
+  .noTickets {
+    gap: 2.5rem;
+  }
+  .noTickets button {
+    font-size: 1.8rem;
+    height: 3rem;
+    padding: 2rem;
+    border: #04d924 0.03rem solid;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px){
+  .title h1 {
+    font-size: 1.7rem;
+  }
+  .menu {
+    margin-top: 2rem;
+  }
+  .menu button {
+    font-size: 1.3rem;
+    padding: 0.5rem;
+  }
+
+  .myticket {
+    margin: 4rem 0 8rem 0;
+  }
+
+  .myticket p {
+    font-size: 1.6rem;
+  }
+  .noTickets {
+    gap: 2rem;
+  }
+  .noTickets button {
+    font-size: 1.3rem;
+    height: 3rem;
+    padding: 1.1rem;
+    border: #04d924 0.03rem solid;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
 }

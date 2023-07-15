@@ -59,3 +59,14 @@
 .modalbtn p {
   color: #04D924;
 }
+
+@media (max-width: 800px){
+  .main {
+    width: 25rem;
+    height: 39rem;
+  }
+  
+  .main img {
+    max-width: 25rem;
+  }
+}

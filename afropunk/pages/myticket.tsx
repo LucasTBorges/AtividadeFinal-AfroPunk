@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { IngressoObj } from "@/services/services";
 import UserTicket from "./components/userticket";
 import type { Perfil } from "@/services/services";
+import MenuMobile from "./components/menumobile";
 
 export default function MyTicket() {
     const [active, setActive] = useState<boolean>(false);
@@ -91,6 +92,7 @@ export default function MyTicket() {
             {closed && <p>Não localizamos nenhum ingresso</p>}
           </div>
         </section>
+        <MenuMobile/>
       </main>
     </>
   );

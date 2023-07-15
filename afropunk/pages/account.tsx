@@ -3,6 +3,7 @@ import LoginHeader from "./components/loginheader";
 import React, { useState, useEffect, ChangeEvent } from "react";
 import type { Perfil } from "@/services/services";
 import Head from "next/head";
+import MenuMobile from "./components/menumobile";
 
 export default function Account() {
   const [perfil, setPerfil] = useState<Perfil | null>(null);
@@ -134,6 +135,7 @@ export default function Account() {
             </form>
           </div>
         </section>
+        <MenuMobile/>
       </main>
     </>
   );

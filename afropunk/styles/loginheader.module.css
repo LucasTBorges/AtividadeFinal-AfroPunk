@@ -32,3 +32,12 @@
   height: 6.4rem;
   align-self: flex-end;
 }
+
+@media (max-width: 800px){
+  .main header{
+    justify-content: center;
+  }
+  .main header p, .main header button {
+    display: none;
+  }
+}

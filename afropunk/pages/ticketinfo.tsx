@@ -36,7 +36,9 @@ export default function TicketInfo() {
               <span>1</span>
               <div>
                 <h2>Informações dos ingressos</h2>
-                <p>Descrição do ingresso</p>
+                {visor1 && visor1 !== '0' && <p>{visor1}x {meia}</p>}
+                {visor2 && visor2 !== '0'&& <p>{visor2}x {meiasocial}</p>}
+                {visor3 && visor3 !== '0'&& <p>{visor3}x {inteira}</p>}
                 <div>
                   <label>Você tem alguma deficiência?</label>
                   <input type="text"></input>

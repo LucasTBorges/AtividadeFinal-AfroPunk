@@ -4,6 +4,8 @@ import styles from '@/styles/descricao.module.css'
 import LoginHeader from './components/loginheader'
 import LogoDescricao from "./../public/images/image 5.svg"
 import SetaParaBaixo from "./../public/images/setaparabaixo.svg"
+import Mais from "./../public/images/mais.svg"
+import Menos from "./../public/images/menos.svg"
 
 export default function Home() {
   return (
@@ -25,6 +27,18 @@ export default function Home() {
     apresentamos a terceira edição brasileira do maior festival de cultura negra do mundo.</p>
                     <p>É hora de celebrar sua comunidade! Sejam bem-vindes ao AFROPUNK Bahia 2023!...</p>
                 </div>
+                <div className={styles.plus}>
+                    <p>ACESSOS:</p>
+                    <p id={styles.span}>Arena</p>
+                    <p>TIPOS DE INGRESSO:</p>
+                    <div>
+                        <p>Inteira: Ingresso válido apenas para o dia escolhido. Dá acesso apenas ao local determinado no ingresso.</p>
+                        <p>Meia entrada: Ingresso destinado a estudantes, idosos, trans, professores e PCDs.</p>
+                        <p>50% de desconto no valor do ingresso mediante a apresentação de comprovação (exigida apenas para estudantes, idosos e professores). Têm direito à meia-entrada estudantes de ensino público e particular (comprovante de matrícula aceito como comprovação); pessoas com idade igual ou superior a 60 anos; professores; pessoas com deficiência; e pessoas trans.</p>
+                        <p>Ingresso social: A cada ingresso social, o festival destina R$ 10,00 (descontados os devidos impostos) para instituições e projetos que impulsionam a construção de novas possibilidades para o povo negro.</p>
+                    </div>                    
+                    <p>***O evento será filmado, gravado e fotografado, a critério do produtor/promotor, para posterior publicação, transmissão, retransmissão, reprodução ou divulgação em TV, cinema, rádio, internet, publicidade ou qualquer outro veículo de comunicação e nos canais digitais do festival e de seus patrocinadores.</p>
+                </div>
                 <div id={styles.linha}></div>
                 <div id={styles.setabaixo}>                    
                     <a><Image src={SetaParaBaixo} alt="" width={44} height={24} /></a>
@@ -36,24 +50,41 @@ export default function Home() {
                 </div>
                 <div className={styles.ingressos}>
                     <div className={styles.card}>
-                        <p>Meia - EXCLUSIVE FOR STUDENT, ELDERLY, TRANS, PWD, TEACHER</p>
-                        <p>R$ 85,00</p>
-                        <a>BOTÕES</a>
+                        <div className={styles.cardtext}>
+                            <p>Meia - EXCLUSIVE FOR STUDENT, ELDERLY, TRANS, PWD, TEACHER</p>
+                            <p>R$ 85,00</p>
+                        </div>                        
+                        <div id={styles.ajuste} className={styles.numerosingressos}>
+                            <a><Image src={Menos} alt='' width={20} height={20} /></a>
+                            <p>0</p>
+                            <a><Image src={Mais} alt='' width={20} height={20} /></a>
+                        </div>
                     </div>
                     <div className={styles.card}>
-                        <p>MEIA SOCIAL - SOCIAL TICKET</p>
-                        <p>R$ 95,00</p>
-                        <a>BOTÕES</a>
+                        <div className={styles.cardtext}>
+                            <p>MEIA SOCIAL - SOCIAL TICKET</p>
+                            <p>R$ 95,00</p>
+                        </div>                        
+                        <div className={styles.numerosingressos}>
+                            <a><Image src={Menos} alt='' width={20} height={20} /></a>
+                            <p>0</p>
+                            <a><Image src={Mais} alt='' width={20} height={20} /></a>
+                        </div>
                     </div>
                     <div className={styles.card}>
-                        <p>Inteira</p>
-                        <p>R$ 170,00</p>
-                        <a>BOTÕES</a>
+                        <div className={styles.cardtext}>
+                            <p>Inteira</p>
+                            <p>R$ 170,00</p>
+                        </div>                        
+                        <div className={styles.numerosingressos}>
+                            <a><Image src={Menos} alt='' width={20} height={20} /></a>
+                            <p>0</p>
+                            <a><Image src={Mais} alt='' width={20} height={20} /></a>
+                        </div>
                     </div>
                 </div>
                 <div className={styles.subtotal}>
                     <h2>Subtotal: R$</h2>
-                    {/* <h2>Subtotal: R$ {valor}</h2> */}
                     <a>Continuar</a>
                 </div>
             </div>

@@ -17,7 +17,7 @@ export default function Ingressos() {
             <div className={styles.ingressos}>
                 <Ingresso tipo="Meia" valor="R$85,00" />
                 <Ingresso tipo="Meia social" valor="R$95,00" />
-                <Ingresso tipo="Inteira" valor="R$130,00" />
+                <Ingresso tipo="Inteira" valor="R$170,00" />
             </div>
             <div className={styles.bottom}>
               <a>COMPRAR INGRESSO</a>

@@ -2,6 +2,7 @@ import styles from '@/styles/header.module.css'
 import Image from 'next/image'
 import Logo from "./../../public/images/afropunk.svg"
 import Login from "./../../public/images/login.svg"
+import MenuMobile from "./../../public/images/menumobile.svg"
 import Link from 'next/link'
 
 export default function Header() {
@@ -9,7 +10,7 @@ export default function Header() {
     <>
       <header className={styles.header}>
         <div>
-            <a href='/'><Image src={Logo} alt="" width={176} height={26} /></a>
+            <a href='/'><Image id={styles.logo} src={Logo} alt="" /></a>
         </div>
         <nav className={styles.nav1}>
             <a href='/#inicio'>Inicio</a>
@@ -20,7 +21,7 @@ export default function Header() {
         </nav>
         <nav className={styles.nav2}>
             <a id={styles.comprar}>COMPRAR</a>
-            <a id={styles.casa} href="/login"><Image src={Login} alt="" /></a>
+            <a id={styles.casa} href="/login"><Image id={styles.casinha} src={Login} alt="" /><Image id={styles.menumobile} src={MenuMobile} alt="" /></a>
         </nav>
       </header>
     </>

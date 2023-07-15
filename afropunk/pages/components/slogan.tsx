@@ -4,7 +4,6 @@ import Facebook from './../../public/images/facebook.svg'
 import Instagram from './../../public/images/instagram.svg'
 import Youtube from './../../public/images/youtube.svg'
 import Twitter from './../../public/images/twitter.svg'
-// import Background from './../../public/images/background.svg'
 
 export default function Slogan() {
   return (
@@ -12,10 +11,10 @@ export default function Slogan() {
         <section id='inicio' className={styles.section}>
             <div className={styles.slogan}>
                 <div className={styles.icones}>
-                    <a><Image className={styles.bordericone} src={Facebook} alt='' width={95} height={95} /></a>
-                    <a><Image className={styles.bordericone} src={Instagram} alt='' width={95} height={95} /></a>
-                    <a><Image className={styles.bordericone} src={Youtube} alt='' width={95} height={95} /></a>
-                    <a><Image className={styles.bordericone} src={Twitter} alt='' width={95} height={95} /></a>
+                    <a href='https://facebook.com'><Image className={styles.bordericone} src={Facebook} alt='' width={95} height={95} /></a>
+                    <a href='https://instagram.com'><Image className={styles.bordericone} src={Instagram} alt='' width={95} height={95} /></a>
+                    <a href='https://youtube.com'><Image className={styles.bordericone} src={Youtube} alt='' width={95} height={95} /></a>
+                    <a href='https://twitter.com'><Image className={styles.bordericone} src={Twitter} alt='' width={95} height={95} /></a>
                 </div>
                 <div className={styles.text}>
                     <div className={styles.divtext}>

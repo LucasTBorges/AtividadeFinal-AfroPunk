@@ -1,6 +1,6 @@
 import styles from '@/styles/menumobilewhite.module.css'
 
-export default function MenuMobile() {
+export default function MenuMobileWhite() {
     return (
         <>
             <footer className={styles.mainMobile}>

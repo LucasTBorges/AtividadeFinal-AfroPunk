@@ -1,5 +1,5 @@
 import styles from "@/styles/loginheaderwhite.module.css";
-import InfoCard from "./modalwhite";
+import InfoCardWhite from "./modalwhite";
 import { useState } from "react";
 
 export default function LoginHeaderWhite() {
@@ -11,7 +11,7 @@ export default function LoginHeaderWhite() {
   return (
     <>
     <main className={styles.main}>
-      {infoCardVisible && <InfoCard />}
+      {infoCardVisible && <InfoCardWhite />}
       <header>
         <p>.</p>
         <a href="/">

@@ -1,7 +1,7 @@
 import styles from "@/styles/modalwhite.module.css";
 import { signOut } from "next-auth/react";
 
-export default function InfoCard() {
+export default function InfoCardWhite() {
 
   return (
     <>

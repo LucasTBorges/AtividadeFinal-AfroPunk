@@ -4,10 +4,19 @@ import Logo from "./../../public/images/afropunk.svg"
 import Login from "./../../public/images/login.svg"
 import MenuMobile from "./../../public/images/menumobile.svg"
 import Link from 'next/link'
+import HeaderModal from './headermodal'
+import { useState } from "react";
 
 export default function Header() {
+  const [menuVisible, setMenuVisible] = useState<boolean>(false);
+
+  const handleMenu = () => {
+    setMenuVisible(!menuVisible);
+  };
+
   return (
     <>
+      {menuVisible && <HeaderModal />}
       <header className={styles.header}>
         <div>
             <a href='/'><Image id={styles.logo} src={Logo} alt="" /></a>
@@ -21,7 +30,8 @@ export default function Header() {
         </nav>
         <nav className={styles.nav2}>
             <a id={styles.comprar}>COMPRAR</a>
-            <a id={styles.casa} href="/login"><Image id={styles.casinha} src={Login} alt="" /><Image id={styles.menumobile} src={MenuMobile} alt="" /></a>
+            <a id={styles.casa} href="/login"><Image id={styles.casinha} src={Login} alt="" /></a>
+            <a onClick={handleMenu}><Image id={styles.menumobile} src={MenuMobile} alt="" /></a>
         </nav>
       </header>
     </>

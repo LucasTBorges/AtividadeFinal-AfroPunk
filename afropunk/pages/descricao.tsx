@@ -4,10 +4,12 @@ import styles from '@/styles/descricao.module.css'
 import LoginHeader from './components/loginheader'
 import LogoDescricao from "./../public/images/image 5.svg"
 import SetaParaBaixo from "./../public/images/setaparabaixo.svg"
+import SetaParaCima from "./../public/images/setaparacima.svg"
 import Mais from "./../public/images/mais.svg"
 import Menos from "./../public/images/menos.svg"
 import { useState } from "react";
 import Link from 'next/link'
+import { maxIngressos } from '@/services/services'
 
 export default function Home() {
     const [descriptionVisible, setDescriptionVisible] = useState<boolean>(false);
@@ -15,7 +17,7 @@ export default function Home() {
     const [visor1, setVisor1] = useState<number>(0);
     const [visor2, setVisor2] = useState<number>(0);
     const [visor3, setVisor3] = useState<number>(0);
-    // const [ingressos, setIngressos] = useState<number>(0);
+    const [ingressos, setIngressos] = useState<number>();
 
     const handleDescription = () => {
         setDescriptionVisible(!descriptionVisible)
@@ -95,9 +97,12 @@ export default function Home() {
                     <p>***O evento será filmado, gravado e fotografado, a critério do produtor/promotor, para posterior publicação, transmissão, retransmissão, reprodução ou divulgação em TV, cinema, rádio, internet, publicidade ou qualquer outro veículo de comunicação e nos canais digitais do festival e de seus patrocinadores.</p>
                 </div>}
                 <div id={styles.linha}></div>
-                <div id={styles.setabaixo}>                    
+                {!descriptionVisible && <div id={styles.seta}>                    
                     <a onClick={handleDescription}><Image src={SetaParaBaixo} alt="" width={44} height={24} /></a>
-                </div>                
+                </div>}
+                {descriptionVisible && <div id={styles.seta}>                    
+                    <a onClick={handleDescription}><Image src={SetaParaCima} alt="" width={44} height={24} /></a>
+                </div>}             
             </div>
             <div>
                 <div className={styles.arena}>
@@ -140,7 +145,7 @@ export default function Home() {
                 </div>
                 <div className={styles.subtotal}>
                     <h2>Subtotal: R$ {subtotal.toFixed(2)}</h2>
-                    <Link href={`/ticketinfo?visor1=${visor1}&visor2=${visor2}&visor3=${visor3}&subtotal=${subtotal}`} className={styles.botaosubtotal}>Continuar</Link>
+                    {subtotal !== 0 && <Link href={`/ticketinfo?visor1=${visor1}&visor2=${visor2}&visor3=${visor3}&subtotal=${subtotal}`} className={styles.botaosubtotal}>Continuar</Link>}
                 </div>
             </div>
         </section>

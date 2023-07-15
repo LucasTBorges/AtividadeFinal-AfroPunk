@@ -59,13 +59,13 @@
     width: 100%;
 }
 
-#setabaixo {
+#seta {
     display: flex;
     justify-content: center;
     padding: 2.4rem 0rem 5.6rem;
 }
 
-#setabaixo>a {
+#seta>a {
     cursor: pointer;
 }
 

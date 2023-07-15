@@ -7,6 +7,7 @@ import SetaParaBaixo from "./../public/images/setaparabaixo.svg"
 import Mais from "./../public/images/mais.svg"
 import Menos from "./../public/images/menos.svg"
 import { useState } from "react";
+import Link from 'next/link'
 
 export default function Home() {
     const [descriptionVisible, setDescriptionVisible] = useState<boolean>(false);
@@ -139,7 +140,7 @@ export default function Home() {
                 </div>
                 <div className={styles.subtotal}>
                     <h2>Subtotal: R$ {subtotal.toFixed(2)}</h2>
-                    <a>Continuar</a>
+                    <Link href={`/ticketinfo?visor1=${visor1}&visor2=${visor2}&visor3=${visor3}&subtotal=${subtotal}`} className={styles.botaosubtotal}>Continuar</Link>
                 </div>
             </div>
         </section>

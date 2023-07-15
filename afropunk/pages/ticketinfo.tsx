@@ -1,6 +1,14 @@
 import styles from "@/styles/ticketinfo.module.css";
 import LoginHeaderWhite from "./components/loginheaderwhite";
+import { useRouter } from "next/router";
+
 export default function TicketInfo() {
+    const router = useRouter();
+    const {visor1, visor2, visor3, subtotal} = router.query;
+    const inteira = '1º Lote [INTEIRA]'
+    const meia = '1º Lote [MEIA] - EXCLUSIVE FOR STUDENT, ELDERLY, TRANS, PWD, TEACHER'
+    const meiasocial = '1º Lote [MEIA SOCIAL] - SOCIAL TICKET'
+    const valortotal = typeof subtotal === 'string' ? parseInt(subtotal) : 0
   return (
     <>
       <main className={styles.mainTicketInfo}>
@@ -13,12 +21,14 @@ export default function TicketInfo() {
             </div>
             <div className={styles.ticketDescription}>
               <p>Sábado, 18 de novembro de 2023 às 16h00</p>
-
               <p>Arena</p>
-              <p>Descrição do ingresso</p>
+              {visor1 && visor1 !== '0' && <p>{visor1}x {meia}</p>}
+              {visor2 && visor2 !== '0'&& <p>{visor2}x {meiasocial}</p>}
+              {visor3 && visor3 !== '0'&& <p>{visor3}x {inteira}</p>}
+              
             </div>
             <div className={styles.ticketValue}>
-              <p>R$ 0.00</p>
+              <p>R$ {valortotal.toFixed(2)}</p>
             </div>
           </div>
           <div className={styles.ticketForms}>

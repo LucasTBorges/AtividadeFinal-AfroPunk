@@ -145,11 +145,12 @@
     color: #FFF;
 }
 
-.subtotal>a {
+.subtotal>.botaosubtotal {
     font-family: 'Poppins';
     font-weight: 900;
     font-size: 1.6rem;
     color: #F5F5F5;
+    text-decoration: none;
     background-color: #04D924;
     border-radius: 7.5rem;
     padding: 0.45rem 1.5rem;

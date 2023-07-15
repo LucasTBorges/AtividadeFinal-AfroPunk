@@ -54,7 +54,7 @@
   display: flex;
   justify-content: flex-end;
   border-top: #000 0.01rem solid;
-  margin-top: 20rem;
+  margin-top: 12rem;
 }
 
 .ticketForms {
@@ -98,6 +98,7 @@
   width: 12.6rem;
   height: 3.6rem;
   margin-top: 3rem;
+  cursor: pointer;
 }
 
 .ticketInfor {
@@ -140,6 +141,9 @@
   border: 0.07rem solid #022601;
   width: 58rem;
   height: 4.8rem;
+  color: #000;
+  font-size: 2rem;
+  padding-left: 1.5rem;
 }
 
 .paymentsInfor {

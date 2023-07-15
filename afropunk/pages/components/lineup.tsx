@@ -6,7 +6,7 @@ import Emicida from './../../public/images/emicida.svg'
 export default function Lineup() {
   return (
     <>
-        <section className={styles.section}>
+        <section id='line-up' className={styles.section}>
             {/* <div className={styles.div}> */}
                 <div className={styles.titulo}>
                     <h2>L<span>i</span>ne-<span>u</span>p</h2>
@@ -63,7 +63,7 @@ export default function Lineup() {
                     <h3>Alcione</h3>
                 </div>
                 <div className={styles.bottom}>
-                    <a>+</a>
+                    <a href='/atracoes'>+</a>
                 </div>
             {/* </div>             */}
         </section>

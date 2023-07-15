@@ -4,7 +4,7 @@ import Ingresso from './ingresso'
 export default function Ingressos() {
   return (
     <>
-        <section className={styles.section}>
+        <section id='ingressos' className={styles.section}>
             <div className={styles.text}>
               <div className={styles.divh2}>
                 <div className={styles.linha1}></div>

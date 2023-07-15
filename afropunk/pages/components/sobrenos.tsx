@@ -3,7 +3,7 @@ import styles from '@/styles/sobrenos.module.css'
 export default function Sobrenos() {
   return (
     <>
-        <section className={styles.section}>
+        <section id='sobrenos' className={styles.section}>
             <div className={styles.div}>
                 <div className={styles.titulo}>
                     <div className={styles.linha1}></div>

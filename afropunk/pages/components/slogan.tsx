@@ -9,7 +9,7 @@ import Twitter from './../../public/images/twitter.svg'
 export default function Slogan() {
   return (
     <>
-        <section className={styles.section}>
+        <section id='inicio' className={styles.section}>
             <div className={styles.slogan}>
                 <div className={styles.icones}>
                     <a><Image className={styles.bordericone} src={Facebook} alt='' width={95} height={95} /></a>

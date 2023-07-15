@@ -9,14 +9,14 @@ export default function Header() {
     <>
       <header className={styles.header}>
         <div>
-            <Image src={Logo} alt="" width={176} height={26} />
+            <a href='/'><Image src={Logo} alt="" width={176} height={26} /></a>
         </div>
         <nav className={styles.nav1}>
-            <a>Inicio</a>
-            <a>Sobre</a>
-            <a>Line-up</a>
-            <a>Ingressos</a>
-            <a href='#galeria'>Galeria</a>
+            <a href='/#inicio'>Inicio</a>
+            <a href='/#sobrenos'>Sobre</a>
+            <a href='/#line-up'>Line-up</a>
+            <a href='/#ingressos'>Ingressos</a>
+            <a href='/#galeria'>Galeria</a>
         </nav>
         <nav className={styles.nav2}>
             <a id={styles.comprar}>COMPRAR</a>

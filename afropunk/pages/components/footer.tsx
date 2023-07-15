@@ -1,21 +1,20 @@
 import styles from '@/styles/footer.module.css'
 import Image from 'next/image'
 import Logo from "./../../public/images/afropunk.svg"
-import Link from 'next/link'
 
 export default function Footer() {
   return (
     <>
       <footer className={styles.footer}>
         <div className={styles.div1}>
-            <Image src={Logo} alt="" width={252} height={46} />
+            <a href='/'><Image src={Logo} alt="" width={252} height={46} /></a>
             <div className={styles.div2}>
                 <nav className={styles.nav1}>
-                    <a>Inicio</a>
-                    <a>Sobre Nós</a>
-                    <a>Line-up</a>
-                    <a>Ingressos</a>
-                    <Link href='#galeria'>Galeria</Link>
+                    <a href='/#inicio'>Inicio</a>
+                    <a href='/#sobrenos'>Sobre Nós</a>
+                    <a href='/#line-up'>Line-up</a>
+                    <a href='/#ingressos'>Ingressos</a>
+                    <a href='/#galeria'>Galeria</a>
                 </nav>
                 <nav className={styles.nav2}>
                     <a>Facebook</a>

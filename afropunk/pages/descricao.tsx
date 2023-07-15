@@ -6,8 +6,62 @@ import LogoDescricao from "./../public/images/image 5.svg"
 import SetaParaBaixo from "./../public/images/setaparabaixo.svg"
 import Mais from "./../public/images/mais.svg"
 import Menos from "./../public/images/menos.svg"
+import { useState } from "react";
 
 export default function Home() {
+    const [descriptionVisible, setDescriptionVisible] = useState<boolean>(false);
+    const [subtotal, setSubtotal] = useState<number>(0);
+    const [visor1, setVisor1] = useState<number>(0);
+    const [visor2, setVisor2] = useState<number>(0);
+    const [visor3, setVisor3] = useState<number>(0);
+    // const [ingressos, setIngressos] = useState<number>(0);
+
+    const handleDescription = () => {
+        setDescriptionVisible(!descriptionVisible)
+    }
+
+    const handleAdd1 = () => {
+        setVisor1(visor1+1)
+        setSubtotal(subtotal + 85)
+    }
+
+    const handleAdd2 = () => {
+        setVisor2(visor2+1)
+        setSubtotal(subtotal + 95)
+    }
+
+    const handleAdd3 = () => {
+        setVisor3(visor3+1)
+        setSubtotal(subtotal + 170)
+    }
+
+    const handleReduce1 = () => {
+        if (visor1 > 0) {
+            setVisor1(visor1-1)
+            setSubtotal(subtotal - 85)
+        } else {
+            setVisor1(0)
+        }       
+    }
+
+    const handleReduce2 = () => {
+        if (visor2 > 0) {
+            setVisor2(visor2-1)
+            setSubtotal(subtotal - 95)
+        } else {
+            setVisor2(0)
+        }
+    }
+
+    const handleReduce3 = () => {
+        if (visor3 > 0) {
+            setVisor3(visor3-1)
+            setSubtotal(subtotal - 170)
+        } else {
+            setVisor3(0)
+        }
+    }
+
   return (
     <>
       <Head>
@@ -27,7 +81,7 @@ export default function Home() {
     apresentamos a terceira edição brasileira do maior festival de cultura negra do mundo.</p>
                     <p>É hora de celebrar sua comunidade! Sejam bem-vindes ao AFROPUNK Bahia 2023!...</p>
                 </div>
-                <div className={styles.plus}>
+                {descriptionVisible && <div className={styles.plus}>
                     <p>ACESSOS:</p>
                     <p id={styles.span}>Arena</p>
                     <p>TIPOS DE INGRESSO:</p>
@@ -38,10 +92,10 @@ export default function Home() {
                         <p>Ingresso social: A cada ingresso social, o festival destina R$ 10,00 (descontados os devidos impostos) para instituições e projetos que impulsionam a construção de novas possibilidades para o povo negro.</p>
                     </div>                    
                     <p>***O evento será filmado, gravado e fotografado, a critério do produtor/promotor, para posterior publicação, transmissão, retransmissão, reprodução ou divulgação em TV, cinema, rádio, internet, publicidade ou qualquer outro veículo de comunicação e nos canais digitais do festival e de seus patrocinadores.</p>
-                </div>
+                </div>}
                 <div id={styles.linha}></div>
                 <div id={styles.setabaixo}>                    
-                    <a><Image src={SetaParaBaixo} alt="" width={44} height={24} /></a>
+                    <a onClick={handleDescription}><Image src={SetaParaBaixo} alt="" width={44} height={24} /></a>
                 </div>                
             </div>
             <div>
@@ -55,9 +109,9 @@ export default function Home() {
                             <p>R$ 85,00</p>
                         </div>                        
                         <div id={styles.ajuste} className={styles.numerosingressos}>
-                            <a><Image src={Menos} alt='' width={20} height={20} /></a>
-                            <p>0</p>
-                            <a><Image src={Mais} alt='' width={20} height={20} /></a>
+                            <a onClick={handleReduce1}><Image src={Menos} alt='' width={20} height={20} /></a>
+                            <p>{visor1}</p>
+                            <a onClick={handleAdd1}><Image src={Mais} alt='' width={20} height={20} /></a>
                         </div>
                     </div>
                     <div className={styles.card}>
@@ -66,9 +120,9 @@ export default function Home() {
                             <p>R$ 95,00</p>
                         </div>                        
                         <div className={styles.numerosingressos}>
-                            <a><Image src={Menos} alt='' width={20} height={20} /></a>
-                            <p>0</p>
-                            <a><Image src={Mais} alt='' width={20} height={20} /></a>
+                            <a onClick={handleReduce2}><Image src={Menos} alt='' width={20} height={20} /></a>
+                            <p>{visor2}</p>
+                            <a onClick={handleAdd2}><Image src={Mais} alt='' width={20} height={20} /></a>
                         </div>
                     </div>
                     <div className={styles.card}>
@@ -77,14 +131,14 @@ export default function Home() {
                             <p>R$ 170,00</p>
                         </div>                        
                         <div className={styles.numerosingressos}>
-                            <a><Image src={Menos} alt='' width={20} height={20} /></a>
-                            <p>0</p>
-                            <a><Image src={Mais} alt='' width={20} height={20} /></a>
+                            <a onClick={handleReduce3}><Image src={Menos} alt='' width={20} height={20} /></a>
+                            <p>{visor3}</p>
+                            <a onClick={handleAdd3}><Image src={Mais} alt='' width={20} height={20} /></a>
                         </div>
                     </div>
                 </div>
                 <div className={styles.subtotal}>
-                    <h2>Subtotal: R$</h2>
+                    <h2>Subtotal: R$ {subtotal.toFixed(2)}</h2>
                     <a>Continuar</a>
                 </div>
             </div>

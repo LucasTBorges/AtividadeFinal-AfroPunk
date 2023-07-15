@@ -44,7 +44,7 @@ export default function Payments() {
                 <input type="number" placeholder="1" />
               </div>
               <div className={styles.paymentsBtn}>
-                <button>Finalizar</button>
+                <a href="/comprafinalizada">Finalizar</a>
                 </div>
             </div>
           </form>

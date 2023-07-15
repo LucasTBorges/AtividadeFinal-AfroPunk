@@ -1,5 +1,5 @@
 import styles from "@/styles/loginheaderwhite.module.css";
-import InfoCard from "./modal";
+import InfoCard from "./modalwhite";
 import { useState } from "react";
 
 export default function LoginHeaderWhite() {

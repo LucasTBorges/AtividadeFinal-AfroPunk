@@ -11,7 +11,7 @@ export default function InfoCardWhite() {
           <p>Minha conta</p>
         </div>
         </a>
-        <a><div>
+        <a href="/descricao"><div>
           <img src="../images/ticketwhite.svg" alt="ícone de ingresso da aba comprar"/>
           <p>Comprar</p>
         </div>

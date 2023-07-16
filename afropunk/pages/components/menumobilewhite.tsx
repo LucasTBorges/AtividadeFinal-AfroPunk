@@ -10,7 +10,7 @@ export default function MenuMobileWhite() {
                         <p>Minha conta</p>
                     </div>
                 </a>
-                <a>
+                <a href='/descricao'>
                 <div>
                     <img src="./images/buymobilewhite.svg" alt="ícone para acessar a página de compras"></img>
                     <p>Comprar</p>

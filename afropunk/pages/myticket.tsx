@@ -97,7 +97,7 @@ export default function MyTicket() {
                 {tickets && tickets.length === 0 && (
                   <div className={styles.noTickets}>
                     <p>Não localizamos nenhum ingresso</p>
-                    <button>COMPRAR INGRESSO</button>
+                    <a href="/descricao">COMPRAR INGRESSO</a>
                 </div>
                 )}
               </>

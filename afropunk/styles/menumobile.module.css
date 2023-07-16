@@ -19,11 +19,26 @@
     text-decoration: none;
 }
 
+.mainMobile a:visited{
+    color: inherit;
+}
+
 .mainMobile div {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+.mainMobile .activeRoute p{
+    color: #04D924;
+}
+
+.activeRoute img {
+    filter: sepia(100%) hue-rotate(90deg) saturate(20) brightness(5);
+}
+
+
+
 
 @media (max-width: 800px){
     .mainMobile {

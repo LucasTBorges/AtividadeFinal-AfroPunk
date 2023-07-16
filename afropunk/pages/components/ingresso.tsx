@@ -13,7 +13,7 @@ export default function Ingresso(props: IProps) {
         <>
             <div className={styles.ingresso}>
                 <div className={styles.ingressotop}>
-                    <Image src={Logo} alt="" width={193} height={35} />
+                    <Image id={styles.logo} src={Logo} alt="" />
                 </div>
                 <div className={styles.ingressobottom}>
                     <div className={styles.text}>
@@ -22,7 +22,6 @@ export default function Ingresso(props: IProps) {
                         <h2 id={styles.valor}>{valor}</h2>
                     </div>
                     <div className={styles.circulo}>
-
                     </div>
                 </div>
             </div>

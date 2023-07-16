@@ -14,6 +14,11 @@
     padding-bottom: 17.3rem;
 }
 
+#logodescricao {
+    width: 81.6rem;
+    height: 45.9rem;
+}
+
 .descricao {
     padding-top: 3.5rem;
 }
@@ -63,6 +68,11 @@
     display: flex;
     justify-content: center;
     padding: 2.4rem 0rem 5.6rem;
+}
+
+#setacima, #setabaixo {
+    width: 4.4rem;
+    height: 2.4rem;
 }
 
 #seta>a {
@@ -124,6 +134,11 @@
     cursor: pointer;
 }
 
+.botaomenos, .botaomais {
+    width: 2rem;
+    height: 2rem;
+}
+
 .numerosingressos>p {
     font-family: 'Poppins';
     font-weight: 400;
@@ -155,4 +170,84 @@
     border-radius: 7.5rem;
     padding: 0.45rem 1.5rem;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 1024px) {
+    .section {
+        width: 100vw;
+        padding: 0rem 3rem 6rem;
+    }    
+    #logodescricao {
+        width: 48rem;
+        height: 27rem;
+    }
+    .ingressos {
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #logodescricao {
+        width: 32.05rem;
+        height: 18rem;
+    }
+    .descricao {
+        padding-top: 1.5rem;
+    }
+    .descricao>h1 {
+        font-size: 1.738rem;
+    }
+    .paragrafos {
+        padding: 1.1rem 0rem;
+    }
+    .paragrafos>p, .plus>p, .plus>div>p {
+        font-size: 0.94rem;
+    }
+    #seta {
+        padding: 0.9rem 0rem 1.8rem;
+    }
+    #setacima, #setabaixo {
+        width: 1.72rem;
+        height: 0.928rem;
+    }
+    .arena>h2 {
+        font-size: 1.4rem;
+    }
+    .ingressos {
+        gap: 0.779rem;
+        padding: 1.7rem 0rem 0rem;
+    }
+    .card {
+        width: 19.4rem;
+        height: 5.28rem;
+        padding: 0.7rem 0.95rem;
+    }
+    .cardtext>p {
+        font-size: 0.7rem;
+    }
+    #ajuste {
+        margin-top: -0.8rem;
+    }
+    .numerosingressos>p {
+        font-size: 0.86rem;
+    }
+    .subtotal {
+        border: none;
+        padding: 0rem;
+        align-items: center;
+    }
+    .subtotal>h2  {
+        font-size: 1.42rem;
+        padding-top: 1.85rem;
+        padding-bottom: 2.5rem;
+    }
+    .botaosubtotal {
+        font-size: 1.11rem;
+    }
+    .botaomenos, .botaomais {
+        width: 0.866rem;
+        height: 0.866rem;
+    }
 }

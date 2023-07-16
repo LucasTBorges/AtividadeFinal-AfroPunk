@@ -10,6 +10,7 @@ import Menos from "./../public/images/menos.svg"
 import { useState } from "react";
 import Link from 'next/link'
 import { maxIngressos } from '@/services/services'
+import MenuMobile from './components/menumobile'
 
 export default function Home() {
     const [descriptionVisible, setDescriptionVisible] = useState<boolean>(false);
@@ -76,7 +77,7 @@ export default function Home() {
       <main className={styles.main}>
         <LoginHeader />
         <section className={styles.section}>
-            <Image src={LogoDescricao} alt="" width={816} height={459} />
+            <Image id={styles.logodescricao} src={LogoDescricao} alt="" />
             <div className={styles.descricao}>
                 <h1>DESCRIÇÃO DO EVENTO</h1>
                 <div className={styles.paragrafos}>
@@ -98,13 +99,13 @@ export default function Home() {
                 </div>}
                 <div id={styles.linha}></div>
                 {!descriptionVisible && <div id={styles.seta}>                    
-                    <a onClick={handleDescription}><Image src={SetaParaBaixo} alt="" width={44} height={24} /></a>
+                    <a onClick={handleDescription}><Image id={styles.setabaixo} src={SetaParaBaixo} alt="" /></a>
                 </div>}
                 {descriptionVisible && <div id={styles.seta}>                    
-                    <a onClick={handleDescription}><Image src={SetaParaCima} alt="" width={44} height={24} /></a>
+                    <a onClick={handleDescription}><Image id={styles.setacima} src={SetaParaCima} alt="" /></a>
                 </div>}             
             </div>
-            <div>
+            <div className={styles.selecao}>
                 <div className={styles.arena}>
                     <h2>Arena</h2>
                 </div>
@@ -115,9 +116,9 @@ export default function Home() {
                             <p>R$ 85,00</p>
                         </div>                        
                         <div id={styles.ajuste} className={styles.numerosingressos}>
-                            <a onClick={handleReduce1}><Image src={Menos} alt='' width={20} height={20} /></a>
+                            <a onClick={handleReduce1}><Image className={styles.botaomenos} src={Menos} alt='' /></a>
                             <p>{visor1}</p>
-                            <a onClick={handleAdd1}><Image src={Mais} alt='' width={20} height={20} /></a>
+                            <a onClick={handleAdd1}><Image className={styles.botaomais} src={Mais} alt='' /></a>
                         </div>
                     </div>
                     <div className={styles.card}>
@@ -126,9 +127,9 @@ export default function Home() {
                             <p>R$ 95,00</p>
                         </div>                        
                         <div className={styles.numerosingressos}>
-                            <a onClick={handleReduce2}><Image src={Menos} alt='' width={20} height={20} /></a>
+                            <a onClick={handleReduce2}><Image className={styles.botaomenos} src={Menos} alt='' /></a>
                             <p>{visor2}</p>
-                            <a onClick={handleAdd2}><Image src={Mais} alt='' width={20} height={20} /></a>
+                            <a onClick={handleAdd2}><Image className={styles.botaomais} src={Mais} alt='' /></a>
                         </div>
                     </div>
                     <div className={styles.card}>
@@ -137,9 +138,9 @@ export default function Home() {
                             <p>R$ 170,00</p>
                         </div>                        
                         <div className={styles.numerosingressos}>
-                            <a onClick={handleReduce3}><Image src={Menos} alt='' width={20} height={20} /></a>
+                            <a onClick={handleReduce3}><Image className={styles.botaomenos} src={Menos} alt='' /></a>
                             <p>{visor3}</p>
-                            <a onClick={handleAdd3}><Image src={Mais} alt='' width={20} height={20} /></a>
+                            <a onClick={handleAdd3}><Image className={styles.botaomais} src={Mais} alt='' /></a>
                         </div>
                     </div>
                 </div>
@@ -149,6 +150,7 @@ export default function Home() {
                 </div>
             </div>
         </section>
+        <MenuMobile />
       </main>
     </>
   )

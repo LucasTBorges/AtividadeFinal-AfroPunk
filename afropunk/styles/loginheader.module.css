@@ -34,10 +34,17 @@
 }
 
 @media (max-width: 800px){
+  .main {
+    height: 12.2rem;
+  }
   .main header{
     justify-content: center;
   }
   .main header p, .main header button {
     display: none;
+  }
+  .logo {
+    width: 22.4rem;
+    height: 2.82rem;
   }
 }

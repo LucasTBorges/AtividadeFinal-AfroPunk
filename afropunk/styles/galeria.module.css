@@ -30,9 +30,9 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     gap: 6.67rem;
-    width: 100vw;
+    width: calc(75rem + 6.67rem + 6.67rem);
 }
 
 .image, .remove {
@@ -43,6 +43,8 @@
 @media only screen and (max-width: 900px) {
     .div2 {
         gap: 2.5rem;
+        justify-content: space-evenly;        
+        width: 100vw;
     }
 }
 

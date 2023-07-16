@@ -38,8 +38,9 @@
     height: 34.1rem;
 }
 
-.text1, .text2, .text3 {
+.text1, .text1>div, .text2, .text2>div, .text3 {
     display: flex;
+    flex-direction: row;
     align-items: center;
 }
 
@@ -49,17 +50,17 @@
     align-items: center;
 }
 
-.text1>h5, .text2>h5, .text3>h5 {
+.text1>h5, .text1>div>h5, .text2>div>h5, .text3>h5 {
     font-family: 'Audiowide';
     font-weight: 400;
     color: #F5F5F5
 }
 
-.text1>h5 {
+.text1>div>h5, .text1>h5 {
     font-size: 7.2375rem;
 }
 
-.text2>h5 {
+.text2>div>h5 {
     font-size: 5.4516rem;
 }
 
@@ -67,14 +68,14 @@
     font-size: 10rem;
 }
 
-.text1>h3 {
+.text1>div>h3, .text1>div>h3 {
     font-family: 'Poppins';
     font-size: 5.32rem;
     font-weight: 900;
     color: #04D924;
 }
 
-.text2>h4, .nomegrande>h4 {
+.text2>div>h4, .nomegrande>h4 {
     font-family: 'Poppins';
     font-size: 4rem;
     font-weight: 900;
@@ -137,19 +138,19 @@
         width: 27rem;
         height: 17rem;
     }
-    .text1>h5 {
+    .text1>h5, .text1>div>h5 {
         font-size: 3.6rem;
     }    
-    .text2>h5 {
+    .text2>h5, .text2>div>h5 {
         font-size: 2.7rem;
     }    
     .text3>h5 {
         font-size: 5rem;
     }
-    .text1>h3 {
+    .text1>div>h3 {
         font-size: 2.6rem;
     }    
-    .text2>h4, .nomegrande>h4 {
+    .text2>div>h4, .nomegrande>h4 {
         font-size: 2rem;
     }    
     .text3>h3 {
@@ -175,8 +176,74 @@
 }
 
 @media only screen and (max-width: 768px) {
+    .titulo>h2, .titulo>h2>span {
+        font-size: 5.65rem;
+    }
+    .images {
+        padding: 2.4rem 2.2rem 7.34rem;
+        width: 346px;
+        flex-direction: column;
+    }
+    #image2 {
+        width: 23.6rem;
+        height: 14.8rem;        
+        order: 1;
+        display: flex;
+        align-self: flex-end;
+    }
+    #image1 {
+        width: 21.1rem;
+        height: 11.9rem;
+        order: 2;       
+        margin-top: -5rem;        
+        display: flex;
+        align-self: flex-start;
+    }
 }
 
 @media only screen and (max-width: 425px) {
-    
+    /* .remove {
+        display: none;
+        visibility: hidden;
+        height: 0;
+    } */
+    .text1, .text2 {
+        flex-direction: column;
+    }
+    .text1>div, .text2>div {
+        gap: 1rem;
+    }
+    .text1>div>h3 {
+        font-size: 3rem;        
+    }
+    .text1>div>h5 {
+        font-size: 4.2rem;
+    }
+    .text1>div>h4, .nomegrande>h4 {
+        font-size: 2.08rem;
+    }
+    .text2>div>h5 {
+        font-size: 2.8rem;
+    }
+    #ludmilla {
+        font-size: 3.87rem;
+    }
+    #order1 {
+        order: 1;
+    }
+    #order2 {
+        order: 2;
+    }
+    #order3 {
+        order: 3;
+    }
+    #order4 {
+        order: 4;
+    }
+    #order5 {
+        order: 5;
+    }
+    #order6 {
+        order: 6;
+    }
 }

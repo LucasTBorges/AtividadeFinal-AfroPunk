@@ -78,6 +78,9 @@
 }
 
 @media only screen and (max-width: 425px) {
+    .footer {
+        margin-bottom: 1000rem;
+    }
     .div1 {
         flex-direction: column;
         align-items: center;

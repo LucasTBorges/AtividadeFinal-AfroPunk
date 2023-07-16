@@ -60,9 +60,11 @@
         border-top: 1px solid #F5F5F5;
         margin-left: calc(50% - 10.7rem);
     }    
-    #remove {
+    /* #remove {
         display: none;
-    }
+        visibility: hidden;
+        height: 0;
+    } */
 }
 
 @media only screen and (max-width: 425px) {
@@ -74,7 +76,9 @@
         width: 12.9rem;
         height: 12.9rem;
     }
-    .remove {
+    /* .remove {
         display: none;
-    }
+        visibility: hidden;
+        height: 0;
+    } */
 }

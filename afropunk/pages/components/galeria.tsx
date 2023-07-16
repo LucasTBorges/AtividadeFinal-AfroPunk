@@ -9,8 +9,13 @@ import Foto6 from './../../public/images/Rectangle 137.svg'
 import Foto7 from './../../public/images/Rectangle 138.svg'
 import Foto8 from './../../public/images/Rectangle 139.svg'
 import Foto9 from './../../public/images/Rectangle 140.svg'
+import React from 'react'
+import { useMediaQuery } from 'react-responsive';
+
 
 export default function Galeria() {
+  const apaga = useMediaQuery({ maxWidth: 768 });
+  const apagao = useMediaQuery({ maxWidth: 425 });
   return (
     <>
         <section id='galeria' className={styles.section}>
@@ -23,11 +28,11 @@ export default function Galeria() {
                 <Image className={styles.image} src={Foto2} alt="" />
                 <Image className={styles.image} src={Foto3} alt="" />
                 <Image className={styles.image} src={Foto4} alt="" />
-                <Image className={styles.remove} src={Foto5} alt="" />
-                <Image className={styles.remove} src={Foto6} alt="" />
-                <Image className={styles.remove} src={Foto7} alt="" />
-                <Image className={styles.remove} src={Foto8} alt="" />
-                <Image id={styles.remove} src={Foto9} alt="" />
+                {!apagao && (<Image className={styles.image} src={Foto5} alt="" />)
+                && (<Image className={styles.image} src={Foto6} alt="" />)
+                && (<Image className={styles.image} src={Foto7} alt="" />)
+                && (<Image className={styles.image} src={Foto8} alt="" />)
+                && (<Image className={styles.image} src={Foto9} alt="" />)}
             </div>
         </section>
     </>

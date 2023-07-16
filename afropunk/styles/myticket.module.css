@@ -44,7 +44,12 @@
   padding: 1.5rem;
 }
 
-.menu button:focus {
+/* .menu button:focus {
+  color: #04d924;
+  border-bottom: #04d924 0.2rem solid;
+} */
+
+.menu .activeButton{
   color: #04d924;
   border-bottom: #04d924 0.2rem solid;
 }

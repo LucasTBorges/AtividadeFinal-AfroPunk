@@ -12,15 +12,21 @@ export default function MyTicket() {
     const [closed, setClosed] = useState<boolean>(false);
     const [tickets, setTickets] = useState<IngressoObj[] | null>(null);
     const [perfil, setPerfil] = useState<Perfil | null>(null);
+    const [activeButton, setActiveButton] = useState<string>("closed");
+    const [closedButton, setClosedButton] = useState<string>("closed");
   
     const handleActive = () => {
       setActive(true);
       setClosed(false);
+      setActiveButton("active")
+      setClosedButton("closed")
     };
   
     const handleClosed = () => {
       setClosed(true);
       setActive(false);
+      setActiveButton("closed")
+      setClosedButton("active")
     };
 
     
@@ -74,8 +80,8 @@ export default function MyTicket() {
             <h1>Meus ingressos</h1>
           </div>
           <div className={styles.menu}>
-            <button onClick={handleActive}>Ativos</button>
-            <button onClick={handleClosed}>Encerrados</button>
+            <button onClick={handleActive} className={activeButton === "active" ? styles.activeButton: ""}>Ativos</button>
+            <button onClick={handleClosed} className={closedButton === "active" ? styles.activeButton: ""}>Encerrados</button>
           </div>
           <div className={styles.myticket}>
             

@@ -19,15 +19,15 @@ export default function Galeria() {
                 <div className={styles.divaleatoria}></div>
             </div>
             <div className={styles.div2}>
-                <Image src={Foto1} alt="" />
-                <Image src={Foto2} alt="" />
-                <Image src={Foto3} alt="" />
-                <Image src={Foto4} alt="" />
-                <Image src={Foto5} alt="" />
-                <Image src={Foto6} alt="" />
-                <Image src={Foto7} alt="" />
-                <Image src={Foto8} alt="" />
-                <Image src={Foto9} alt="" />
+                <Image className={styles.image} src={Foto1} alt="" />
+                <Image className={styles.image} src={Foto2} alt="" />
+                <Image className={styles.image} src={Foto3} alt="" />
+                <Image className={styles.image} src={Foto4} alt="" />
+                <Image className={styles.remove} src={Foto5} alt="" />
+                <Image className={styles.remove} src={Foto6} alt="" />
+                <Image className={styles.remove} src={Foto7} alt="" />
+                <Image className={styles.remove} src={Foto8} alt="" />
+                <Image id={styles.remove} src={Foto9} alt="" />
             </div>
         </section>
     </>

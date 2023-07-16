@@ -29,7 +29,7 @@ export default function Header() {
             <a href='/#galeria'>Galeria</a>
         </nav>
         <nav className={styles.nav2}>
-            <a href='/descricao' id={styles.comprar}>COMPRAR</a>
+            <a id={styles.comprar}>COMPRAR</a>
             <a id={styles.casa} href="/login"><Image id={styles.casinha} src={Login} alt="" /></a>
             <a onClick={handleMenu}><Image id={styles.menumobile} src={MenuMobile} alt="" /></a>
         </nav>

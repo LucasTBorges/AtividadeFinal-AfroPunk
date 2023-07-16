@@ -1,4 +1,3 @@
-'use client'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '@/styles/descricao.module.css'
@@ -8,33 +7,18 @@ import SetaParaBaixo from "./../public/images/setaparabaixo.svg"
 import SetaParaCima from "./../public/images/setaparacima.svg"
 import Mais from "./../public/images/mais.svg"
 import Menos from "./../public/images/menos.svg"
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from 'next/link'
-import { ingressosDisponiveis } from '@/services/services'
+import { maxIngressos } from '@/services/services'
 import MenuMobile from './components/menumobile'
 
 export default function Home() {
     const [descriptionVisible, setDescriptionVisible] = useState<boolean>(false);
-    const [podeVender, setPodeVender] = useState<boolean>(true);
     const [subtotal, setSubtotal] = useState<number>(0);
     const [visor1, setVisor1] = useState<number>(0);
     const [visor2, setVisor2] = useState<number>(0);
     const [visor3, setVisor3] = useState<number>(0);
-
-    const [quantidadeIngressos, setQuantidadeIngressos] = useState<number>();
-
-    useEffect(() => {
-        const obterQuantidadeIngressos = async () => {
-            const quantidade = await ingressosDisponiveis();
-            setQuantidadeIngressos(quantidade);
-        };
-
-        obterQuantidadeIngressos();
-    }, []);
-
-    if (visor1 + visor2 + visor3 === quantidadeIngressos) {
-        setPodeVender(false)
-    }
+    const [ingressos, setIngressos] = useState<number>();
 
     const handleDescription = () => {
         setDescriptionVisible(!descriptionVisible)
@@ -131,36 +115,33 @@ export default function Home() {
                             <p>Meia - EXCLUSIVE FOR STUDENT, ELDERLY, TRANS, PWD, TEACHER</p>
                             <p>R$ 85,00</p>
                         </div>                        
-                        {podeVender && <div id={styles.ajuste} className={styles.numerosingressos}>
+                        <div id={styles.ajuste} className={styles.numerosingressos}>
                             <a onClick={handleReduce1}><Image className={styles.botaomenos} src={Menos} alt='' /></a>
                             <p>{visor1}</p>
                             <a onClick={handleAdd1}><Image className={styles.botaomais} src={Mais} alt='' /></a>
-                        </div>}
-                        {!podeVender &&  <div className={styles.numerosingressos} id={styles.esgotado}>ESGOTADO</div>}
+                        </div>
                     </div>
                     <div className={styles.card}>
                         <div className={styles.cardtext}>
                             <p>MEIA SOCIAL - SOCIAL TICKET</p>
                             <p>R$ 95,00</p>
                         </div>                        
-                        {podeVender && <div className={styles.numerosingressos}>
+                        <div className={styles.numerosingressos}>
                             <a onClick={handleReduce2}><Image className={styles.botaomenos} src={Menos} alt='' /></a>
                             <p>{visor2}</p>
                             <a onClick={handleAdd2}><Image className={styles.botaomais} src={Mais} alt='' /></a>
-                        </div>}
-                        {!podeVender &&  <div className={styles.numerosingressos} id={styles.esgotado}>ESGOTADO</div>}
+                        </div>
                     </div>
                     <div className={styles.card}>
                         <div className={styles.cardtext}>
                             <p>Inteira</p>
                             <p>R$ 170,00</p>
                         </div>                        
-                        {podeVender && <div className={styles.numerosingressos}>
+                        <div className={styles.numerosingressos}>
                             <a onClick={handleReduce3}><Image className={styles.botaomenos} src={Menos} alt='' /></a>
                             <p>{visor3}</p>
                             <a onClick={handleAdd3}><Image className={styles.botaomais} src={Mais} alt='' /></a>
-                        </div>}
-                        {!podeVender &&  <div className={styles.numerosingressos} id={styles.esgotado}>ESGOTADO</div>}
+                        </div>
                     </div>
                 </div>
                 <div className={styles.subtotal}>

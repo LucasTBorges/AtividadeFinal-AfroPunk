@@ -22,7 +22,7 @@ export default function Slogan() {
                         <h2 id={styles.texth2}>Um encontro <span>ancestral</span></h2>
                     </div>                    
                     <div className={styles.divbutton}>
-                        <a href='/descricao'>COMPRAR INGRESSO</a>
+                        <a>COMPRAR INGRESSO</a>
                     </div>
                 </div>
             </div>

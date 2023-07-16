@@ -109,7 +109,7 @@
     padding: 2rem;
 }
 
-.cardtext>p, #esgotado {
+.cardtext>p {
     font-family: 'Poppins';
     font-weight: 700;
     font-size: 1.6rem;
@@ -132,10 +132,6 @@
 
 .numerosingressos>a {
     cursor: pointer;
-}
-
-#esgotado {
-    color: #FB2525;
 }
 
 .botaomenos, .botaomais {
@@ -228,7 +224,7 @@
         height: 5.28rem;
         padding: 0.7rem 0.95rem;
     }
-    .cardtext>p, #esgotado {
+    .cardtext>p {
         font-size: 0.7rem;
     }
     #ajuste {

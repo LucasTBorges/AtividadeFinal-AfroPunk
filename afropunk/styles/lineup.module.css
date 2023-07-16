@@ -28,6 +28,16 @@
     display: flex;
 }
 
+#image1 {
+    width: 54.3rem;
+    height: 30.5rem;
+}
+
+#image2 {
+    width: 54.5rem;
+    height: 34.1rem;
+}
+
 .text1, .text2, .text3 {
     display: flex;
     align-items: center;
@@ -106,4 +116,67 @@
     font-weight: 900;
     color: #FFF;
     text-decoration: none;
+}
+
+@media only screen and (max-width: 1024px) {
+    .section {
+        padding-top: 5.1rem;
+        padding-bottom: 3.87rem;
+    }
+    .images {
+        padding: 2.4rem 0rem 7.3rem;
+    }
+    .titulo>h2, .titulo>h2>span {
+        font-size: 10rem;
+    }
+    #image1 {
+        width: 27rem;
+        height: 15rem;
+    }
+    #image2 {
+        width: 27rem;
+        height: 17rem;
+    }
+    .text1>h5 {
+        font-size: 3.6rem;
+    }    
+    .text2>h5 {
+        font-size: 2.7rem;
+    }    
+    .text3>h5 {
+        font-size: 5rem;
+    }
+    .text1>h3 {
+        font-size: 2.6rem;
+    }    
+    .text2>h4, .nomegrande>h4 {
+        font-size: 2rem;
+    }    
+    .text3>h3 {
+        font-size: 3.7rem;
+    }    
+    .text2p {
+        gap: 1rem;
+    }    
+    .text2 {
+        gap: 0.5rem;
+    }    
+    .text3 {
+        padding: 0.5rem 0rem 4.2rem;
+    }
+    .bottom {
+        width: 12.5rem;
+        height: 6.2rem;
+        border-radius: 2.5rem 0rem;
+    }    
+    .bottom>a {
+        font-size: 6.5rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+}
+
+@media only screen and (max-width: 425px) {
+    
 }

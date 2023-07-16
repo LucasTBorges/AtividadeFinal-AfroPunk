@@ -12,8 +12,8 @@ export default function Lineup() {
                     <h2>L<span>i</span>ne-<span>u</span>p</h2>
                 </div>
                 <div className={styles.images}>
-                    <Image src={Liniker} alt="" width={543} height={305} />
-                    <Image src={Emicida} alt="" width={545} height={341} />
+                    <Image id={styles.image1} src={Liniker} alt="" />
+                    <Image id={styles.image2} src={Emicida} alt="" />
                 </div>
                 <div className={styles.text1}>
                     <h3>LINIKER</h3>

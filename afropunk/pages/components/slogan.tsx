@@ -11,17 +11,17 @@ export default function Slogan() {
         <section id='inicio' className={styles.section}>
             <div className={styles.slogan}>
                 <div className={styles.icones}>
-                    <a href='https://facebook.com'><Image className={styles.bordericone} src={Facebook} alt='' width={95} height={95} /></a>
-                    <a href='https://instagram.com'><Image className={styles.bordericone} src={Instagram} alt='' width={95} height={95} /></a>
-                    <a href='https://youtube.com'><Image className={styles.bordericone} src={Youtube} alt='' width={95} height={95} /></a>
-                    <a href='https://twitter.com'><Image className={styles.bordericone} src={Twitter} alt='' width={95} height={95} /></a>
+                    <a href='https://facebook.com'><Image className={styles.bordericone} src={Facebook} alt='' /></a>
+                    <a href='https://instagram.com'><Image className={styles.bordericone} src={Instagram} alt='' /></a>
+                    <a href='https://youtube.com'><Image className={styles.bordericone} src={Youtube} alt='' /></a>
+                    <a href='https://twitter.com'><Image className={styles.bordericone} src={Twitter} alt='' /></a>
                 </div>
                 <div className={styles.text}>
                     <div className={styles.divtext}>
                         <h2>Mais que um movimento</h2>
                         <h2 id={styles.texth2}>Um encontro <span>ancestral</span></h2>
                     </div>                    
-                    <div>
+                    <div className={styles.divbutton}>
                         <a>COMPRAR INGRESSO</a>
                     </div>
                 </div>

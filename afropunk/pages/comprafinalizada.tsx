@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import styles from '@/styles/comprafinalizada.module.css'
 import LoginHeaderWhite from './components/loginheaderwhite'
+import MenuMobile from './components/menumobile'
+import MenuMobileWhite from './components/menumobilewhite'
 import Image from 'next/image'
 import Verificado from "./../public/images/verificado.svg"
 
@@ -14,17 +16,20 @@ export default function CompraFinalizada() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <LoginHeaderWhite />
-        <section className={styles.section}>
-            <div className={styles.image}>
-                <Image src={Verificado} alt='' />                
-            </div>
-            <div className={styles.text}>
-                <h2>Obrigada!</h2>
-                <h3>Pagamento efetuado. Agora retorne a tela de ingressos para acessar o seu ingresso.</h3>
-                <a href="/myticket">Meus ingressos</a>
-            </div>            
-        </section>
+        <div>
+          <LoginHeaderWhite />
+          <section className={styles.section}>
+              <div className={styles.image}>
+                  <Image id={styles.verificado} src={Verificado} alt='' />                
+              </div>
+              <div className={styles.text}>
+                  <h2>Obrigada!</h2>
+                  <h3>Pagamento efetuado. Agora retorne a tela de ingressos para acessar o seu ingresso.</h3>
+                  <a href="/myticket">Meus ingressos</a>
+              </div>            
+          </section>
+        </div>        
+        <MenuMobileWhite />
       </main>
     </>
   )

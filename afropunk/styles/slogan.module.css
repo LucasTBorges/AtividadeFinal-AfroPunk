@@ -195,6 +195,10 @@
     color: #F5F5F5;
 }
 
+.divbutton>a {
+    text-decoration: none;
+}
+
 @media only screen and (max-width: 1280px) {
     .section {
         padding-bottom: 2.1rem; /* é apenas metade */

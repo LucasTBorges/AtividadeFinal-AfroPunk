@@ -20,7 +20,7 @@ export default function Ingressos() {
                 <Ingresso tipo="Inteira" valor="R$170,00" />
             </div>
             <div className={styles.bottom}>
-              <a>COMPRAR INGRESSO</a>
+              <a href='/descricao'>COMPRAR INGRESSO</a>
             </div>
         </section>
     </>

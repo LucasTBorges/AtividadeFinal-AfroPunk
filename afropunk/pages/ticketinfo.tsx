@@ -72,7 +72,7 @@ export default function TicketInfo() {
           </div>
           <div className={styles.paymentFooter}>
               <p>Métodos de pagamento</p>
-              <img src="./images/paymentsmethod.svg" />
+              <img src="./images/paymentsmethod.svg" alt="Imagem dos métodos de pagamentos disponíveis"/>
             </div>
           
           </div>

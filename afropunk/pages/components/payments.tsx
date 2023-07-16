@@ -5,7 +5,7 @@ export default function Payments() {
     <>
       <main className={styles.mainPayments}>
         <div className={styles.mainPaymentsTitle}>
-          <img src="./images/creditcard.svg" alt="" />
+          <img src="./images/creditcard.svg" alt="ícone de um cartão de crédito" />
           <h1>Cartão de crédito</h1>
         </div>
         <h2>Dados do cartão</h2>

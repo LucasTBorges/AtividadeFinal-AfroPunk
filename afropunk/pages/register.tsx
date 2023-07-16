@@ -24,7 +24,7 @@ export default function Register() {
         }),
       });
     } catch (err) {
-      console.log(err);
+      console.log(err)
     }
   };
   const handleFullName = (event: React.ChangeEvent<HTMLInputElement>) => {

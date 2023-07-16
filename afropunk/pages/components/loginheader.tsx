@@ -8,9 +8,14 @@ export default function LoginHeader() {
   const handleVisible = () => {
     setInfoCardVisible(!infoCardVisible);
   };
+  const handleCloseModal = () => {
+    if (infoCardVisible === true){
+      setInfoCardVisible(false)
+    }
+  }
   return (
     <>
-    <main className={styles.main}>
+    <main className={styles.main} onClick={handleCloseModal}>
       {infoCardVisible && <InfoCard />}
       <header>
         <p>.</p>
